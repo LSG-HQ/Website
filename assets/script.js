@@ -30,7 +30,7 @@ async function init() {
 
   var mat = new THREE.LineBasicMaterial({
     color: 0xffffff,
-    linewidth: 100
+    linewidth: 5
   });
 
   object.traverse(function (child) {
