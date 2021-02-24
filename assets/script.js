@@ -1,17 +1,7 @@
-import * as THREE from "../node_modules/three/build/three.module.js";
-import { FirstPersonControls } from "../node_modules/three/examples/jsm/controls/FirstPersonControls.js";
-import { ImprovedNoise } from "../node_modules/three/examples/jsm/math/ImprovedNoise.js";
-import { GLTFLoader } from "../node_modules/three/examples/jsm/loaders/GLTFLoader.js";
-import { OBJLoader } from "../node_modules/three/examples/jsm/loaders/OBJLoader.js";
-import { MTLLoader } from "../node_modules/three/examples/jsm/loaders/MTLLoader.js";
-import { OrbitControls } from "../node_modules/three/examples/jsm/controls/OrbitControls.js";
-import { RGBELoader } from "../node_modules/three/examples/jsm/loaders/RGBELoader.js";
-
-// import {
-//   MeshLine,
-//   MeshLineMaterial,
-//   MeshLineRaycast
-// } from "../node_modules/three.meshline/src/THREE.MeshLine.js";
+import * as THREE from "../three/three.module.js";
+import { OBJLoader } from "../three/OBJLoader.js";
+import { MTLLoader } from "../three/MTLLoader.js";
+import { OrbitControls } from "../three/OrbitControls.js";
 
 let camera, scene, renderer, object;
 async function init() {
