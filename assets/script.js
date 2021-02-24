@@ -84,10 +84,10 @@ async function init() {
 
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.minDistance = 2;
-  controls.maxDistance = 10;
+  controls.maxDistance = 20;
   controls.minPolarAngle = 1.2;
   console.log(controls);
-  controls.target.set(0, 4, 10);
+  controls.target.set(4, 4, 10);
   controls.update();
 
   window.controls = controls;
