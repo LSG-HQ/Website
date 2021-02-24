@@ -28,34 +28,33 @@ async function init() {
 
   // wireframe
 
-  var mat = new THREE.LineBasicMaterial({
-    color: 0xffffff,
-    linewidth: 5
-  });
+  // var mat = new THREE.LineBasicMaterial({
+  //   color: 0xffffff,
+  //   linewidth: 1
+  // });
 
   object.traverse(function (child) {
     if (child.isMesh) {
       if (child.material.length) {
         child.material.forEach(material => {
-          // material.wireframe = true;
-          material.opacity = 0;
-          material.transparent = true;
+          material.wireframe = true;
+          // material.opacity = 0;
+          // material.transparent = true;
           // material.color = new THREE.Color(0x020014);
-          material.color = new THREE.Color(0x0036a3);
+          // material.color = new THREE.Color(0x0036a3);
         });
       } else {
-        // child.material.wireframe = true;
+        child.material.wireframe = true;
         // child.material.linewidth = 10;
-        child.material.opacity = 0;
-        child.material.transparent = true;
+        // child.material.opacity = 0;
+        // child.material.transparent = true;
         // child.material.color = new THREE.Color(0x020014);
-        child.material.color = new THREE.Color(0x0036a3);
+        // child.material.color = new THREE.Color(0x0036a3);
       }
-      var geo = new THREE.WireframeGeometry(child.geometry);
+      // var geo = new THREE.WireframeGeometry(child.geometry);
 
-      var wireframe = new THREE.LineSegments(geo, mat);
-      console.log(wireframe);
-      child.add(wireframe);
+      // var wireframe = new THREE.LineSegments(geo, mat);
+      // child.add(wireframe);
     }
   });
   const box3 = new THREE.Box3().setFromObject(object);
@@ -68,26 +67,11 @@ async function init() {
     -0.8929000584948701,
     -0.2628834797765133
   );
-  // camera.rotation.set(
-  //   -3.0026046999752,
-  //   -0.012571199167031593,
-  //   -3.1398341179622107
-  // );
-  // camera.rotation.set(
-  //   -2.894646246114525,
-  //   0.02461687315857692,
-  //   3.1353876490918733
-  // );
   scene.add(object);
-
-  // var axisHelper = new THREE.AxesHelper(5);
-  // scene.add(axisHelper);
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setClearColor(0x020014);
-  // renderer.setClearColor(0x222222);
-  // renderer.setClearColor(0xd8e7ff);
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1;
@@ -100,9 +84,13 @@ async function init() {
 
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.minDistance = 2;
-  controls.maxDistance = 100000;
+  controls.maxDistance = 10;
+  controls.minPolarAngle = 1.2;
+  console.log(controls);
   controls.target.set(0, 4, 10);
   controls.update();
+
+  window.controls = controls;
 
   window.addEventListener("resize", onWindowResize);
 
@@ -121,83 +109,14 @@ function onWindowResize() {
 //
 window.addEventListener("keydown", e => {
   if (e.shiftKey) {
-    switch (e.keyCode) {
-      case 32:
-        console.log("position: ", camera.position);
-        break;
-      case 65:
-        // a
-        camera.rotation.x -= 0.01;
-        break;
-      case 83:
-        // s
-        camera.rotation.z -= 0.01;
-        break;
-      case 87:
-        // w
-        camera.rotation.y -= 0.01;
-        break;
-      case 38:
-        // up
-        camera.position.y -= 1;
-        break;
-      case 40:
-        // down
-        break;
-      case 37:
-        // left
-        camera.position.x -= 1;
-        break;
-      case 39:
-        // right
-        camera.position.z -= 1;
-        break;
-      default:
-        break;
+    if (e.keyCode === 32) {
+      console.log("position: ", camera.position);
+      return;
     }
-  } else
-    switch (e.keyCode) {
-      case 32:
-        console.log("rotation: ", camera.rotation);
-        break;
-      case 65:
-        // a
-        camera.rotation.x += 0.01;
-        break;
-      case 83:
-        // s
-        camera.rotation.z += 0.01;
-        break;
-      case 87:
-        // w
-        camera.rotation.y += 0.01;
-        break;
-      case 38:
-        // up
-        camera.position.y += 1;
-        break;
-      case 40:
-        // down
-        break;
-      case 37:
-        // left
-        camera.position.x += 1;
-        break;
-      case 39:
-        // right
-        camera.position.z += 1;
-        break;
-      default:
-        break;
-    }
-  if (e.ctrlKey) {
-    camera.position.set(
-      4.58685466223755,
-      2.485235270327925,
-      -2.155599641702704
-    );
+  } else if (e.keyCode === 32) {
+    console.log("rotation: ", camera.rotation);
+    return;
   }
-  renderer.render(scene, camera);
 });
 
 function animate() {
