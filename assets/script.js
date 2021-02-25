@@ -86,6 +86,7 @@ async function init() {
   controls.minDistance = 2;
   controls.maxDistance = 20;
   controls.minPolarAngle = 1.2;
+  controls.maxPolarAngle = 1.9;
   console.log(controls);
   controls.target.set(4, 4, 10);
   controls.update();
