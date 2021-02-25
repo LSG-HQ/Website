@@ -5,10 +5,16 @@ body {
   font-family: "Matrice", Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+  justify-content: center;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 50px;
+}
+
+@media (min-width: 992px) {
+  body {
+    align-items: center;
+  }
 }
 /* 
 @font-face {
