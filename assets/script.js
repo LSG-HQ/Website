@@ -22,39 +22,38 @@ async function init() {
 
   // load the building
   try {
-    const materials = await loadMaterial("sehir/sehir.mtl");
-    object = await loadObject("sehir/sehir.obj");
+    // const materials = await loadMaterial("sehir/sehir.mtl");
+    object = await loadObject("F_M_cityscape.obj");
   } catch (err) {}
 
   // wireframe
 
-  // var mat = new THREE.LineBasicMaterial({
-  //   color: 0xffffff,
-  //   linewidth: 1
-  // });
+  var mat = new THREE.LineBasicMaterial({
+    color: 0xffffff,
+    linewidth: 1
+  });
 
   object.traverse(function (child) {
     if (child.isMesh) {
       if (child.material.length) {
         child.material.forEach(material => {
-          material.wireframe = true;
-          // material.opacity = 0;
-          // material.transparent = true;
+          // material.wireframe = true;
+          material.opacity = 0.7;
+          material.transparent = true;
           // material.color = new THREE.Color(0x020014);
-          // material.color = new THREE.Color(0x0036a3);
+          material.color = new THREE.Color(0x0036a3);
         });
       } else {
-        child.material.wireframe = true;
-        // child.material.linewidth = 10;
-        // child.material.opacity = 0;
-        // child.material.transparent = true;
+        // child.material.wireframe = true;
+        child.material.opacity = 0.7;
+        child.material.transparent = true;
         // child.material.color = new THREE.Color(0x020014);
-        // child.material.color = new THREE.Color(0x0036a3);
+        child.material.color = new THREE.Color(0x0036a3);
       }
-      // var geo = new THREE.WireframeGeometry(child.geometry);
+      var geo = new THREE.WireframeGeometry(child.geometry);
 
-      // var wireframe = new THREE.LineSegments(geo, mat);
-      // child.add(wireframe);
+      var wireframe = new THREE.LineSegments(geo, mat);
+      child.add(wireframe);
     }
   });
   const box3 = new THREE.Box3().setFromObject(object);
@@ -83,7 +82,7 @@ async function init() {
   pmremGenerator.compileEquirectangularShader();
 
   const controls = new OrbitControls(camera, renderer.domElement);
-  controls.minDistance = 2;
+  controls.minDistance = 15;
   controls.maxDistance = 20;
   controls.minPolarAngle = 1.2;
   controls.maxPolarAngle = 1.9;
