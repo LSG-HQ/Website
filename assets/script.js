@@ -23,7 +23,7 @@ async function init() {
   // load the building
   try {
     // const materials = await loadMaterial("sehir/sehir.mtl");
-    object = await loadObject("F_M_cityscape_Latest.obj");
+    object = await loadObject("F_M_cityscape_190421.obj");
   } catch (err) {}
 
   // wireframe
@@ -86,6 +86,7 @@ async function init() {
   controls.maxDistance = 20;
   controls.minPolarAngle = 1.2;
   controls.maxPolarAngle = 1.9;
+  controls.enablePan = false;
   console.log(controls);
   controls.target.set(4, 4, 10);
   controls.update();
@@ -121,7 +122,7 @@ window.addEventListener("keydown", e => {
 
 function animate() {
   // camera.rotation.z += 0.0001;
-  if (object) object.rotation.y += 0.0005;
+  if (object) object.rotation.y += 0.00008;
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
 }
