@@ -1,7 +1,7 @@
 import * as THREE from "../three/three.module.js";
 import { OBJLoader } from "../three/OBJLoader.js";
 import { MTLLoader } from "../three/MTLLoader.js";
-import { OrbitControls } from "../three/OrbitControls.js";
+import { OrbitControls } from "../three/editedControls.js";
 
 let camera, scene, renderer, object;
 async function init() {
@@ -86,9 +86,10 @@ async function init() {
   controls.maxDistance = 20;
   controls.minPolarAngle = 1.2;
   controls.maxPolarAngle = 1.9;
-  controls.enablePan = false;
-  console.log(controls);
+  // controls.enablePan = false;
   controls.target.set(4, 4, 10);
+  console.log(controls);
+
   controls.update();
 
   window.controls = controls;
