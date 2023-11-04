@@ -53,6 +53,7 @@ canvas {
 .link-list {
   display: flex;
   list-style: none;
+  flex-basis: 80%;
   padding-right: 10px;
   font-size: 20px;
   gap: 30px;
