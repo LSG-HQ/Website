@@ -33,10 +33,10 @@
       </div>
       <div class="link-container">
         <ul class="link-list fade-in2">
-          <li><a href="#">About</a></li>
-          <li><a href="#">WDIM?</a></li>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Newsroom</a></li>
+         <li><a class="nav-links" id="nav-item1" href="./about.html">About</a></li>
+          <li><a class="nav-links" id="nav-item2" href="./wdim.html">WDIM?</a></li>
+          <li><a class="nav-links" id="nav-item3" href="./company.html">Company</a></li>
+          <li><a class="nav-links" id="nav-item4" href="./newsroom.html">Newsroom</a></li>
           <li>
             <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
           </li>
@@ -49,5 +49,16 @@
       </div>
       <br />
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let currentPage = window.location.pathname;
+        const links = document.querySelectorAll("a").forEach((link) => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
