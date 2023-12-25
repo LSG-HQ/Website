@@ -214,7 +214,7 @@ canvas {
 .word_raise {
   color: white;
   font-family: Aileron;
-  font-size: 80px;
+  font-size: 75px;
   inline-size: 700px;
   margin-top: 20px;
   transform: scale(0.94);
@@ -227,7 +227,7 @@ canvas {
 }
 
 .words_section {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 @keyframes scale {
   100% {
@@ -238,7 +238,7 @@ canvas {
 .buttons_section {
   position: absolute;
   bottom: 90px;
-  left: 20%;
+  left: 22%;
   transform: translateX(-50%);
   display: flex;
   gap: 30px;
@@ -268,7 +268,7 @@ canvas {
   display: flex;
 }
 .logo_for_welcome {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 .main {
   margin-left: 100px;
@@ -359,3 +359,26 @@ path.two {
     fill: white;
   }
 }
+
+
+/* .typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(30), blink .1s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+} */
