@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Aileron;
+  src: url(assets/fonts/Aileron/Aileron-Bold.otf);
+  font-weight: bold;
+}
 body {
   margin: 0px;
   background-color: #020014;
@@ -198,4 +203,249 @@ canvas {
   -moz-animation: fadeIn ease 2s;
   -o-animation: fadeIn ease 2s;
   -ms-animation: fadeIn ease 2s;
+}
+/* the landing page css */
+.we_exist{
+  color: white;
+  font-family: Aileron;
+  font-size: 30px;
+  font-weight: bold;
+}
+.word_raise{
+  color: white;
+  font-family: Aileron;
+  font-size: 80px;
+  inline-size: 700px;
+  margin-top: 20px;
+  transform: scale(0.94);
+  font-weight: bold;
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  /* height: 400px; */
+  width: 600px;
+  background: -webkit-linear-gradient(#003941, #006E48
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.words_section{
+  margin-top: 100px
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(11) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(12) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(13) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(15) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(17) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(18) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+} */
+.buttons_section{
+  position: absolute;
+  bottom: 90px; 
+  left: 20%; 
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px; 
+
+}
+/* .to_the_site{
+  background-color: #707070;
+  padding: 10px;
+  box-shadow: 3px 5px 5px rgb(255, 255, 255);
+} */
+.to_the_game{
+  background-color: transparent;
+  border: none;
+
+} 
+.to_the_site{
+  background-color: transparent;
+  border: none;
+
+} 
+
+
+
+.a_link{
+  text-decoration: none;
+  color: white;
+  font-family: Aileron;
+  font-size: 20px;
+  display: flex;
+}
+.logo_for_welcome{
+  margin-top: 100px;
+}
+.main{
+  margin-left: 100px;
+}
+
+
+
+.cta {
+    display: flex;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-family: Aileron;
+    font-size: 20px;
+    color: white;
+    background: gray;
+    transition: 1s;
+    box-shadow: 6px 6px 0 rgb(255, 253, 253);
+    transform: skewX(-15deg);
+}
+.svg_home{
+  margin-top: -2px;
+  margin-left: -10px;
+}
+.cta:focus {
+   outline: none; 
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #006E48;
+}
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+  span {
+    transform: skewX(15deg) 
+  }
+
+  span:nth-child(2) {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+  
+/**************SVG****************/
+
+path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #006E48;
+    }
+    100% {
+        fill: white;
+    }
 }
