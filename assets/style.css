@@ -1,6 +1,6 @@
 @font-face {
   font-family: Aileron;
-  src: url(assets/fonts/Aileron/Aileron-Bold.otf);
+  src: url(../assets/fonts/Aileron-Font-Webkit/Aileron-Bold.woff2);
   font-weight: bold;
 }
 body {
