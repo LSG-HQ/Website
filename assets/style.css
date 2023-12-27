@@ -217,15 +217,25 @@ canvas {
   font-size: 75px;
   inline-size: 700px;
   margin-top: 20px;
+  margin-left: -18px;
   transform: scale(0.94);
   font-weight: bold;
-  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  /* animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1); */
   width: 600px;
-  background: -webkit-linear-gradient(#003941, #006e48);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
 }
-
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
 .words_section {
   margin-top: 80px;
 }
@@ -238,7 +248,7 @@ canvas {
 .buttons_section {
   position: absolute;
   bottom: 90px;
-  left: 22%;
+  left: 21.5%;
   transform: translateX(-50%);
   display: flex;
   gap: 30px;
@@ -361,24 +371,3 @@ path.two {
 }
 
 
-/* .typing-demo {
-  width: 22ch;
-  animation: typing 2s steps(30), blink .1s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-} */

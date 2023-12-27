@@ -134,23 +134,50 @@
 
       let currentIndex = 0;
 
-      function displayWords() {
-        const wordsSet = wordsSets[currentIndex];
-        wordContainer.innerHTML = wordsSet
-          .map((word) => `<span>${word}</span>`)
-          .join(" ");
+      function typewrite(text, element, callback) {
+        const characters = text.split("");
+        let charIndex = 0;
 
-        if (currentIndex < 4) {
-          header.textContent = "We exist to";
-        } else {
-          header.textContent = "We Believe In";
-        }
-
-        currentIndex = (currentIndex + 1) % wordsSets.length;
+        const intervalId = setInterval(() => {
+          if (charIndex < characters.length) {
+            element.textContent += characters[charIndex];
+            charIndex++;
+          } else {
+            clearInterval(intervalId);
+            setTimeout(callback, 500); 
+          }
+        }, 100); 
       }
 
-      setInterval(displayWords, 3000);
-      displayWords();
+      function displayWords() {
+        header.textContent = ""; 
+        wordContainer.innerHTML = ""; 
+
+        const wordsSet = wordsSets[currentIndex];
+
+        Promise.all([
+          new Promise((resolve) =>
+            typewrite(
+              currentIndex < 4 ? "We exist to" : "We Believe In",
+              header,
+              resolve
+            )
+          ),
+          ...wordsSet.map(
+            (sentence) =>
+              new Promise((resolve) => {
+                const span = document.createElement("span");
+                wordContainer.appendChild(span);
+                typewrite(sentence, span, resolve);
+              })
+          ),
+        ]).then(() => {
+          currentIndex = (currentIndex + 1) % wordsSets.length;
+          setTimeout(displayWords, 1000); 
+        });
+      }
+
+      displayWords(); 
     </script>
     <!-- The scripts end here -->
   </body>
