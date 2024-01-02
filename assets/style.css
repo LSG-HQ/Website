@@ -115,12 +115,12 @@ canvas {
   -ms-animation: fadeIn ease 4s;
 }
 
-.pages-container {
+/* .pages-container {
   background-image: url("../assets/Background-gif.mp4");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 @keyframes fadeIn2 {
   0% {
     opacity: 0;
