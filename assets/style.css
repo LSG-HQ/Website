@@ -116,7 +116,7 @@ canvas {
 }
 
 .pages-container {
-  background-image: url("./LSG\ Background.jpg");
+  background-image: url("../assets/Background-gif.mp4");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -369,5 +369,12 @@ path.two {
     fill: white;
   }
 }
-
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index:-100;
+}
 
