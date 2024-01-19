@@ -36,6 +36,7 @@
       <section class="words_section">
         <div class="we_exist">We exist to</div>
         <div id="wordContainer" class="word_raise typing-demo"></div>
+        <span id="caret">|</span>
       </section>
     </main>
 
@@ -125,78 +126,7 @@
     </section>
 
     <!-- the script starts here -->
-    <script>
-const wordContainer = document.getElementById("wordContainer");
-const caret = document.getElementById("caret");
-const header = document.querySelector(".we_exist");
-const wordsSets = [
-  ["Raise the potential of the human race"],
-  ["Inspire life without limits"],
-  ["Build the future"],
-  ["Disrespect the impossible"],
-  ["Playing infinite games"],
-  ["Technology"],
-  ["Delivering on hope"],
-  ["Ourselves"],
-];
-
-let currentIndex = 0;
-let currentCharIndex = 0;
-let caretVisible = true;
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function typeText(element, text) {
-  for (let char of text) {
-    element.textContent += char;
-    await sleep(100);
-  }
-}
-
-async function typeWord(word) {
-  const wordWithCaret = word.substring(0, currentCharIndex) +
-    (caretVisible ? "<span class='caret'>|</span>" : "");
-  wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
-  currentCharIndex++;
-
-  await sleep(100);
-
-  if (currentCharIndex <= word.length) {
-    await typeWord(word);
-  } else {
-    currentCharIndex = 0;
-    caretVisible = true; // Reset caret visibility after each word
-  }
-}
-
-async function displayWords() {
-  const wordsSet = wordsSets[currentIndex];
-  const currentWord = wordsSet[0];
-
-  header.textContent = ""; // Reset header text
-
-  // Type the header and word simultaneously
-  if (currentIndex < 4) {
-    await Promise.all([typeText(header, "We exist to"), typeWord(currentWord)]);
-  } else {
-    await Promise.all([typeText(header, "We Believe In"), typeWord(currentWord)]);
-  }
-
-  currentIndex = (currentIndex + 1) % wordsSets.length;
-}
-
-function toggleCaret() {
-  caretVisible = !caretVisible;
-  const caretElement = document.querySelector(".caret");
-  caretElement.style.visibility = caretVisible ? "visible" : "hidden";
-}
-
-setInterval(displayWords, 4000); // Adjust the interval as needed
-setInterval(toggleCaret, 300); // Adjust the interval for caret blinking
-displayWords();
-    </script>
+    <script src="./assets/index.js"></script>
     <!-- The scripts end here -->
   </body>
   <!-- the body ends here -->
