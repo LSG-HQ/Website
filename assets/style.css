@@ -18,7 +18,12 @@ body {
     align-items: center;
   }
 }
-/* 
+
+* {
+  box-sizing: border-box;
+}
+
+/*
 @font-face {
   font-family: "Matrice";
   src: url("fonts/Matrice Bold.otf") format("off2"),
@@ -221,11 +226,11 @@ canvas {
   font-weight: bold;
   /* animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1); */
   width: 600px;
-	color: #f35626;
-	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-animation: hue 10s infinite linear;
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
 }
 @-webkit-keyframes hue {
   from {
@@ -262,10 +267,10 @@ canvas {
   background-color: transparent;
   border: none;
 }
-.To_site_word{
+.To_site_word {
   padding-top: 5px;
 }
-.To_game_word{
+.To_game_word {
   padding-top: 5px;
 }
 
@@ -374,6 +379,5 @@ video {
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index:-100;
+  z-index: -100;
 }
-

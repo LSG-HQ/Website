@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/css/chatbot.css">
+    <link rel="stylesheet" href="./assets/css/tooltip.css">
     <link
       rel="icon"
       type="image/x-icon"
@@ -124,6 +126,18 @@
       </button>
       <!-- The buttons end here -->
     </section>
+
+    <--! Insert this in all pages that needs the chatbot. -->
+    <div class="lsg-chatbot-cta-container">
+      <button id="lsg-chatbot-cta"></button>
+      <div class="tooltip">
+        <div class="tooltiptext">
+          <p>How can I help?</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/chatbot.js"></script>
 
     <!-- the script starts here -->
     <script src="./assets/index.js"></script>
