@@ -1,0 +1,12 @@
+button#LSG-CHATBOT-CTA {
+  width: 9rem;
+  height: 9rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9999;
+  right: 6.25rem;
+  bottom: 3.75rem;
+  background: linear-gradient(180deg, #000020 0%, #24243a 31%, #737373 100%);
+  cursor: pointer;
+}
