@@ -9,4 +9,25 @@ button#LSG-CHATBOT-CTA {
   bottom: 3.75rem;
   background: linear-gradient(180deg, #000020 0%, #24243a 31%, #737373 100%);
   cursor: pointer;
+  overflow: hidden;
+  transition: all 1.4s cubic-bezier(0.4, 0, 1, 1);
+}
+
+button#LSG-CHATBOT-CTA:hover {
+  transform: rotate(360deg);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+button#LSG-CHATBOT-CTA::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 11.125rem;
+  height: 11.125rem;
+  border-radius: 50%;
+  background: url("./../gifs/chatbot-btn.gif"),
+    linear-gradient(180deg, #000020 0%, #24243a 31%, #737373 100%);
+  background-size: cover;
+  opacity: 0.5;
 }
