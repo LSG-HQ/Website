@@ -12,7 +12,7 @@ const wordsSets = [
   "Ourselves",
 ];
 
-const headerText = ["We exist to", "We Believe In"];
+const headerText = ["We exist to", "We believe in"];
 let caretVisible = true;
 let currentCharIndex = 0;
 let currentHeaderChar = 0;
