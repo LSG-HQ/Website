@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --rich-black: #020015;
+    --oxford-blue: #050112;
+    --uranian-blue: #B3D5FC; 
+    --coral-pink: #E8998D;
+    --indian-red: #DB5764; 
+}
+
+#hero-section {
+    background:linear-gradient(to left, #05022100, #05022100), url(../assets/LSG\ Animation\ 2.gif);
+    background-size: cover;
+}
+
+#hero-section h3 span {
+    background: linear-gradient(to right, var(--uranian-blue), var(--coral-pink), var(--indian-red));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 500;
+}

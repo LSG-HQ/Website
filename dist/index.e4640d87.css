@@ -1,0 +1,54 @@
+.lsg-chatbot-cta-container {
+  z-index: 9999;
+  width: 9rem;
+  height: 9rem;
+  position: fixed;
+  bottom: 3.75rem;
+  right: 6.25rem;
+}
+
+.lsg-chatbot-cta-container .tooltip {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+button#lsg-chatbot-cta {
+  cursor: pointer;
+  background: linear-gradient(#000020 0%, #24243a 31%, #737373 100%);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  transition: all 1.4s cubic-bezier(.4, 0, 1, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+button#lsg-chatbot-cta:hover {
+  transform: rotate(360deg);
+  box-shadow: 0 0 1rem #00000080;
+}
+
+button#lsg-chatbot-cta:after {
+  content: "";
+  opacity: .5;
+  background-color: #0000;
+  background-image: url("chatbot-btn.3ee5cad8.gif"), linear-gradient(#000020 0%, #24243a 31%, #737373 100%);
+  background-position: 0 0, 0 0;
+  background-repeat: repeat, repeat;
+  background-size: cover;
+  background-attachment: scroll, scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
+  border-radius: 50%;
+  width: 11.125rem;
+  height: 11.125rem;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+/*# sourceMappingURL=index.e4640d87.css.map */
