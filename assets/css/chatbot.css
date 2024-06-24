@@ -1,4 +1,4 @@
-.lsg-chatbot-cta-container {
+#lsg-chatbot-cta-container {
   position: fixed;
   z-index: 9999;
   right: 6.25rem;
@@ -18,7 +18,7 @@ button#lsg-chatbot-cta {
   cursor: pointer;
   overflow: hidden;
   transition: all 1.4s cubic-bezier(0.4, 0, 1, 1);
-  z-index: 2;
+  z-index: 99999;
 }
 
 button#lsg-chatbot-cta:hover {
@@ -40,11 +40,25 @@ button#lsg-chatbot-cta::after {
   opacity: 0.5;
 }
 
-button#lsg-chatbot-cta:hover ~ .meet-cleo {
-  opacity: 1;
+.cleo-image-popup {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 9.75rem;
+  width: 9.75rem;
+  transition: all 0.5s ease-out;
 }
 
-.meet-cleo {
+button#lsg-chatbot-cta:hover ~ .cleo-image-popup.can-show {
+  top: -4rem;
+}
+
+/* button#lsg-chatbot-cta:hover ~ .cleo {
+  opacity: 1;
+} */
+
+.cleo {
   width: 19.875rem;
   height: 38.6875rem;
   background: linear-gradient(180deg, #100c1b 0%, #413d3f 100%);
@@ -56,9 +70,15 @@ button#lsg-chatbot-cta:hover ~ .meet-cleo {
   overflow: hidden;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  padding: 5rem 2rem;
+  color: white;
 }
 
-.meet-cleo .outer-circle {
+.cleo.show {
+  opacity: 1;
+}
+
+.cleo .outer-circle {
   background: rgba(52, 48, 53, 0.4);
 
   width: 15.5rem;
@@ -73,7 +93,7 @@ button#lsg-chatbot-cta:hover ~ .meet-cleo {
   align-items: center;
 }
 
-.meet-cleo .outer-circle .inner-circle {
+.cleo .outer-circle .inner-circle {
   background: rgba(88, 81, 90, 0.55);
 
   width: 11.75rem;
@@ -81,21 +101,35 @@ button#lsg-chatbot-cta:hover ~ .meet-cleo {
   border-radius: 100%;
 }
 
-.meet-cleo .cleo-image {
+.cleo .cleo-image {
   height: 15.25rem;
   width: 15.25rem;
 }
 
-.meet-cleo .main-content {
+.cleo #cleo-stage-0,
+.cleo #cleo-stage-1,
+.cleo #cleo-stage-2 {
+  display: none;
+}
+
+.cleo #cleo-stage-0.show {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 2rem;
-  color: white;
 }
 
-.meet-cleo .main-content h3 {
+.cleo #cleo-stage-1.show {
+  display: block;
+  padding-top: 1.625rem;
+}
+
+.cleo #cleo-stage-1 .how-can-help {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.cleo h3 {
   font-size: 1.875rem;
   font-weight: 400;
   line-height: 2.25rem;
@@ -103,7 +137,11 @@ button#lsg-chatbot-cta:hover ~ .meet-cleo {
   width: 100%;
 }
 
-.meet-cleo .main-content p {
+.cleo h3 span {
+  font-weight: 300;
+}
+
+.cleo p {
   font-size: 0.875rem;
   line-height: 1.2rem;
   color: white;
