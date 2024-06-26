@@ -13,6 +13,38 @@ chatbotContainer.innerHTML += `
     </div>
 
     <div id="cleo-stage-1">
+      <div class="widget-head">
+        <button class="back-btn">
+          <img src="./assets/svgs/back.svg" />
+        </button>
+
+        <button class="expand-btn">
+          <img src="./assets/svgs/expand.svg" />
+        </button>
+      </div>
+
+      <img src="./assets/pngs/cleo.png" alt="CLEO" class="cleo-image">
+
+      <form id="onboarding-form">
+        <label>
+          Name
+          <input type="text" placeholder="Enter name" />
+        </label>
+
+        <label>
+          Email
+          <input type="email" placeholder="Enter email" />
+        </label>
+
+        <div class="form-btns">
+          <button type="submit">Send
+            <img src="./assets/svgs/arrowHead.svg" />
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="cleo-stage-2">
       <h3><span>Hey,</span> Steph</h3>
 
       <p class="how-can-help">How can I help?</p>
@@ -22,9 +54,13 @@ chatbotContainer.innerHTML += `
     <div class="outer-circle">
       <div class="inner-circle"></div>
     </div>
+
+    <div id="bottom-shade">
+    </div>
   </div>
 `;
 
+const chatbotCta = $("lsg-chatbot-cta");
 const cleoBoxContainer = _(".cleo");
 const cleoImagePopup = _(".cleo-image-popup");
 
@@ -61,17 +97,38 @@ const showStage = (stage) => {
   }
 };
 
+const hideInitialCTA = () => {
+  const cta = $("lsg-chatbot-cta");
+  const outerCircle = _(".outer-circle");
+  const bottomShade = $("bottom-shade");
+
+  cta.classList.add("hide");
+  outerCircle.classList.add("hide");
+  cleoImagePopup.classList.add("hide");
+  bottomShade.classList.add("show");
+};
+
 const handleStageSwitch = () => {
   console.log("whooo");
   const currentStage = getStageShown();
   console.log({ currentStage });
   // if (currentStage === -1) return;
+  // close chatbot cta if stage is 0
+  if (currentStage === 0) {
+    hideInitialCTA();
+  }
 
   hideStage(currentStage);
   showStage(currentStage + 1);
 };
 
-chatbotContainer.addEventListener("click", () => {
+// chatbotContainer.addEventListener("click", () => {
+//   cleoImagePopup.classList.remove("can-show");
+//   cleoBoxContainer.classList.add("show");
+
+//   handleStageSwitch();
+// });
+chatbotCta.addEventListener("click", () => {
   cleoImagePopup.classList.remove("can-show");
   cleoBoxContainer.classList.add("show");
 
