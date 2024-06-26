@@ -1,4 +1,6 @@
 const chatbotContainer = $("lsg-chatbot-cta-container");
+let username = "";
+const email = "";
 
 // add the cleo image that pops up when the chatbot button is hovered.
 chatbotContainer.innerHTML += `
@@ -25,15 +27,15 @@ chatbotContainer.innerHTML += `
 
       <img src="./assets/pngs/cleo.png" alt="CLEO" class="cleo-image">
 
-      <form id="onboarding-form">
+      <form id="onboarding-form" onsubmit="onboardUser(event)">
         <label>
           Name
-          <input type="text" placeholder="Enter name" />
+          <input type="text" placeholder="Enter name" id="cleo-username-input" />
         </label>
 
         <label>
           Email
-          <input type="email" placeholder="Enter email" />
+          <input type="email" placeholder="Enter email" id="cleo-email" />
         </label>
 
         <div class="form-btns">
@@ -45,7 +47,7 @@ chatbotContainer.innerHTML += `
     </div>
 
     <div id="cleo-stage-2">
-      <h3><span>Hey,</span> Steph</h3>
+      <h3><span>Hey</span><b id="username"></b></h3>
 
       <p class="how-can-help">How can I help?</p>
       <div></div>
@@ -122,15 +124,22 @@ const handleStageSwitch = () => {
   showStage(currentStage + 1);
 };
 
-// chatbotContainer.addEventListener("click", () => {
-//   cleoImagePopup.classList.remove("can-show");
-//   cleoBoxContainer.classList.add("show");
-
-//   handleStageSwitch();
-// });
 chatbotCta.addEventListener("click", () => {
   cleoImagePopup.classList.remove("can-show");
   cleoBoxContainer.classList.add("show");
 
   handleStageSwitch();
 });
+
+const onboardUser = (event) => {
+  event.preventDefault();
+  const nameInputValue = $("cleo-username-input").value;
+  const userNameNode = $("username");
+
+  console.log({ nameInputValue });
+  if (nameInputValue) {
+    userNameNode.innerHTML = `, ${nameInputValue}`;
+  }
+
+  handleStageSwitch();
+};
