@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --rich-black: #020015;
+    --oxford-blue: #050112;
+    --uranian-blue: #B3D5FC; 
+    --coral-pink: #E8998D;
+    --indian-red: #DB5764; 
+}
+
+#hero-section {
+    background:linear-gradient(to left, hsla(246, 89%, 7%, 0.8), hsla(246, 89%, 7%, 0.8)), url(../assets/hero-video.gif);
+    background-size: cover;
+}
+
+/* #hero-section h3 span {
+    background: linear-gradient(to right, var(--uranian-blue), var(--coral-pink), var(--indian-red));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 500;
+} */
+
+button.primary-button {
+    background-color: var(--oxford-blue);
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 16px;
+    height: 40px;
+    position: relative;
+    line-height: 16px;
+}
+
+button.primary-button::before, 
+button.primary-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    border: 20px solid transparent;
+}
+button.primary-button::before {
+    left: -40px;
+    border-right-color: var(--oxford-blue);
+    border-bottom-color: var(--oxford-blue);
+}
+button.primary-button::after {
+    right: -40px;
+    border-left-color: var(--oxford-blue);
+    border-top-color: var(--oxford-blue);
+}
+
+button.primary-button {
+    filter: drop-shadow(8px 8px 4px  #3E3E3E80);
+}
