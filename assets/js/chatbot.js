@@ -57,8 +57,15 @@ chatbotContainer.innerHTML += `
       <p class="how-can-help">How can I help?</p>
 
       <div class="menu">
-        <div>
+        <div class="menu-left">
           <img src="./assets/pngs/chat.png"></img>
+        </div>
+
+        <div class="menu-right">
+          <div class="menu-right-up">
+            <img src="./assets/pngs/gamePad.png"></img>
+          </div>
+          <div class="menu-right-bottom"></div>
         </div>
       </div>
     </div>
