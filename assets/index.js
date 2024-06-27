@@ -34,9 +34,6 @@ async function displayLine(lineIndex) {
   currentCharIndex = Math.min(currentCharIndex + 1, sentence.length);
   currentHeaderChar = Math.min(currentHeaderChar + 1, currentHeaderWord.length);
 
-  console.log(currentCharIndex, sentence.length);
-  console.log(currentHeaderChar, currentHeaderWord.length);
-
   /**
    * if the header text and the current word text is done,
    * clear the interval, reset the indices then wait for two seconds
