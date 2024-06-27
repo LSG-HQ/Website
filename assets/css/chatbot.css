@@ -141,7 +141,7 @@ button#lsg-chatbot-cta:hover ~ .cleo-image-popup.can-show {
 
 .cleo #cleo-stage-2.show {
   display: block;
-  padding-top: 1.625rem;
+  padding: 6.625rem 2rem;
 }
 
 .cleo #cleo-stage-1 .how-can-help {
@@ -159,6 +159,24 @@ button#lsg-chatbot-cta:hover ~ .cleo-image-popup.can-show {
 
 .cleo h3 span {
   font-weight: 300;
+}
+
+.cleo #cleo-stage-2 h3 {
+  margin-bottom: 0.5rem;
+}
+
+.cleo #cleo-stage-2 h3 span {
+  font-weight: 300;
+}
+
+.cleo #cleo-stage-2 h3 b {
+  font-weight: 600;
+}
+
+.cleo #cleo-stage-2 .menu {
+  margin-top: 3.25rem;
+  margin-bottom: 1.75rem;
+  display: flex;
 }
 
 .cleo p {

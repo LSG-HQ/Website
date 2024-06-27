@@ -2,6 +2,18 @@ const chatbotContainer = $("lsg-chatbot-cta-container");
 let username = "";
 const email = "";
 
+const widgetHead = `
+  <div class="widget-head">
+    <button class="back-btn">
+      <img src="./assets/svgs/back.svg" />
+    </button>
+
+    <button class="expand-btn">
+      <img src="./assets/svgs/expand.svg" />
+    </button>
+  </div>
+`;
+
 // add the cleo image that pops up when the chatbot button is hovered.
 chatbotContainer.innerHTML += `
   <button id="lsg-chatbot-cta"></button>
@@ -15,15 +27,7 @@ chatbotContainer.innerHTML += `
     </div>
 
     <div id="cleo-stage-1">
-      <div class="widget-head">
-        <button class="back-btn">
-          <img src="./assets/svgs/back.svg" />
-        </button>
-
-        <button class="expand-btn">
-          <img src="./assets/svgs/expand.svg" />
-        </button>
-      </div>
+      ${widgetHead}
 
       <img src="./assets/pngs/cleo.png" alt="CLEO" class="cleo-image">
 
@@ -47,10 +51,16 @@ chatbotContainer.innerHTML += `
     </div>
 
     <div id="cleo-stage-2">
+      ${widgetHead}
       <h3><span>Hey</span><b id="username"></b></h3>
 
       <p class="how-can-help">How can I help?</p>
-      <div></div>
+
+      <div class="menu">
+        <div>
+          <img src="./assets/pngs/chat.png"></img>
+        </div>
+      </div>
     </div>
 
     <div class="outer-circle">
