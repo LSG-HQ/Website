@@ -1,3 +1,10 @@
+import cleoImage from "./../pngs/cleo.png";
+import chatIcon from "./../pngs/chat.png";
+import gamePadIcon from "./../pngs/gamePad.png";
+import arrowHeadIcon from "./../svgs/arrowHead.svg";
+import backIcon from "./../svgs/back.svg";
+import expandIcon from "./../svgs/expand.svg";
+
 const chatbotContainer = $("lsg-chatbot-cta-container");
 let username = "";
 const email = "";
@@ -5,22 +12,23 @@ const email = "";
 const widgetHead = `
   <div class="widget-head">
     <button class="back-btn">
-      <img src="./assets/svgs/back.svg" />
+      <img src=${backIcon} />
     </button>
 
     <button class="expand-btn">
-      <img src="./assets/svgs/expand.svg" />
+      <img src=${expandIcon} />
     </button>
   </div>
 `;
 
+// ${cleoImage};
 // add the cleo image that pops up when the chatbot button is hovered.
 chatbotContainer.innerHTML += `
   <button id="lsg-chatbot-cta"></button>
-  <img src="./assets/pngs/cleo.png" alt="CLEO" class="cleo-image-popup can-show">
+  <img src=${cleoImage} alt="CLEO" class="cleo-image-popup can-show">
   <div class="cleo">
     <div id="cleo-stage-0">
-      <img src="./assets/pngs/cleo.png" alt="CLEO" class="cleo-image">
+      <img src=${cleoImage} alt="CLEO" class="cleo-image">
       <h3>Meet Cleo! <br />Your AI Assistant</h3>
 
       <p>Ask me anything about LSG, this website or life and I’ll do my best to show you a few new ideas.</p>
@@ -29,9 +37,9 @@ chatbotContainer.innerHTML += `
     <div id="cleo-stage-1">
       ${widgetHead}
 
-      <img src="./assets/pngs/cleo.png" alt="CLEO" class="cleo-image">
+      <img src=${cleoImage} alt="CLEO" class="cleo-image">
 
-      <form id="onboarding-form" onsubmit="onboardUser(event)">
+      <form id="onboarding-form" >
         <label>
           Name
           <input type="text" placeholder="Enter name" id="cleo-username-input" />
@@ -44,7 +52,7 @@ chatbotContainer.innerHTML += `
 
         <div class="form-btns">
           <button type="submit">Send
-            <img src="./assets/svgs/arrowHead.svg" />
+            <img src=${arrowHeadIcon} />
           </button>
         </div>
       </form>
@@ -58,12 +66,13 @@ chatbotContainer.innerHTML += `
 
       <div class="menu">
         <div class="menu-left">
-          <img src="./assets/pngs/chat.png"></img>
+          <img src=${chatIcon}></img>
+          <p>Chat with Cleo</p>
         </div>
 
         <div class="menu-right">
           <div class="menu-right-up">
-            <img src="./assets/pngs/gamePad.png"></img>
+            <img src=${gamePadIcon}></img>
           </div>
           <div class="menu-right-bottom"></div>
         </div>
@@ -148,7 +157,12 @@ chatbotCta.addEventListener("click", () => {
   handleStageSwitch();
 });
 
+$("onboarding-form").addEventListener("submit", (event) => {
+  onboardUser(event);
+});
+
 const onboardUser = (event) => {
+  console.log("adeeee");
   event.preventDefault();
   const nameInputValue = $("cleo-username-input").value;
   const userNameNode = $("username");
