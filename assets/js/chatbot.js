@@ -4,10 +4,33 @@ import gamePadIcon from "./../pngs/gamePad.png";
 import arrowHeadIcon from "./../svgs/arrowHead.svg";
 import backIcon from "./../svgs/back.svg";
 import expandIcon from "./../svgs/expand.svg";
+import ellipsisIcon from "./../svgs/ellipsis.svg";
 
 const chatbotContainer = $("lsg-chatbot-cta-container");
-let username = "";
 const email = "";
+
+const chats = [
+  {
+    message: "Hello, I'm Cleo, your AI assistant. How can I help you today?",
+    sender: "bot",
+  },
+  { message: "I'm looking for a job", sender: "user" },
+  {
+    message: "Great! What kind of job are you looking for?",
+    sender: "bot",
+  },
+  { message: "I'm looking for a remote job", sender: "user" },
+  {
+    message:
+      "I have a few recommendations for you. Would you like to see them?",
+    sender: "bot",
+  },
+  { message: "Yes, please", sender: "user" },
+  {
+    message: "Here are a few recommendations for remote jobs",
+    sender: "bot",
+  },
+];
 
 const widgetHead = `
   <div class="widget-head">
@@ -21,6 +44,60 @@ const widgetHead = `
   </div>
 `;
 
+const activities = [
+  { label: "Recommendations for healthy snacks ..." },
+  { label: "When does the next LSG internship s.." },
+];
+
+const renderActivity = (activity) => {
+  const activityLabel = activity?.label;
+  return `
+    <div class="activity">
+      <div>
+        <img src=${chatIcon} alt=${activityLabel} class="chat" />
+        <p>${activityLabel ?? ""}</p>
+      </div>
+
+      <img src=${ellipsisIcon} class="ellipsis" />
+    </div>
+  `;
+};
+
+const renderActivities = (activities = []) => {
+  return `
+  <div class="activities">
+    ${activities.map((activity) => renderActivity(activity)).join("")}
+  </div>
+`;
+};
+
+const renderChat = (chat) => {
+  return `
+    <div class="message ${chat.sender}">
+      <p>${chat.message}</p>
+    </div>
+  `;
+};
+
+const renderChats = (chats = []) => {
+  console.log({ thecahts: chats });
+  return `
+    <div class="chats">
+      ${chats.map((chat) => renderChat(chat)).join("")}
+    </div>
+  `;
+};
+
+const renderChatBox = () => {
+  return `
+    ${widgetHead}
+    <div class="chat-box">
+      ${renderChats(chats)}
+      <input id="chat-box-input" placeholder="Type a message to Cleo..." />
+    </div>
+  `;
+};
+
 // ${cleoImage};
 // add the cleo image that pops up when the chatbot button is hovered.
 chatbotContainer.innerHTML += `
@@ -32,6 +109,12 @@ chatbotContainer.innerHTML += `
       <h3>Meet Cleo! <br />Your AI Assistant</h3>
 
       <p>Ask me anything about LSG, this website or life and I’ll do my best to show you a few new ideas.</p>
+
+      <div class="flex w-full">
+        <button type="button" id="get-started-btn">Get started
+          <img src=${arrowHeadIcon} />
+        </button>
+      </div>
     </div>
 
     <div id="cleo-stage-1">
@@ -77,6 +160,19 @@ chatbotContainer.innerHTML += `
           <div class="menu-right-bottom"></div>
         </div>
       </div>
+
+      <div class="recent-activities">
+        <div class="flex justify-between items-center">
+          <p>Recent Activities</p>
+          <a class="underline">View All</a>
+        </div>
+
+        ${renderActivities(activities)}
+      </div>
+    </div>
+
+    <div id="cleo-stage-3">
+      ${renderChatBox()}
     </div>
 
     <div class="outer-circle">
@@ -91,6 +187,9 @@ chatbotContainer.innerHTML += `
 const chatbotCta = $("lsg-chatbot-cta");
 const cleoBoxContainer = _(".cleo");
 const cleoImagePopup = _(".cleo-image-popup");
+const getStartedBtn = $("get-started-btn");
+const backBtns = __(".back-btn");
+const menuLeftChatWithCleo = _(".menu-left");
 
 const isStageShown = (stage) => {
   if ($(`cleo-stage-${stage}`)) {
@@ -150,10 +249,39 @@ const handleStageSwitch = () => {
   showStage(currentStage + 1);
 };
 
-chatbotCta.addEventListener("click", () => {
+const handleBackBtn = () => {
+  const currentStage = getStageShown();
+  if (currentStage === -1) return;
+
+  hideStage(currentStage);
+  showStage(currentStage - 1);
+};
+
+if (backBtns?.length) {
+  backBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log("back btn clicked");
+      handleBackBtn();
+    });
+  });
+}
+
+const openChatDialog = () => {
   cleoImagePopup.classList.remove("can-show");
   cleoBoxContainer.classList.add("show");
+};
 
+menuLeftChatWithCleo.addEventListener("click", () => {
+  handleStageSwitch();
+});
+
+chatbotCta.addEventListener("click", () => {
+  openChatDialog();
+  handleStageSwitch();
+});
+
+getStartedBtn.addEventListener("click", () => {
+  openChatDialog();
   handleStageSwitch();
 });
 
