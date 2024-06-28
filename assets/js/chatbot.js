@@ -191,6 +191,8 @@ const getStartedBtn = $("get-started-btn");
 const backBtns = __(".back-btn");
 const menuLeftChatWithCleo = _(".menu-left");
 
+console.log({ backBtns });
+
 const isStageShown = (stage) => {
   if ($(`cleo-stage-${stage}`)) {
     return $(`cleo-stage-${stage}`).classList.contains("show");
@@ -201,7 +203,7 @@ const getStageShown = () => {
   // stage 1 is meet cleo,
   // stage 2 is "hey user"
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     if (isStageShown(i)) {
       return i;
     }
