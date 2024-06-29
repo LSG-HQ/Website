@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+.bg-gif {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
+}
+
+/* .under-construction {
+  height: 100vh;
+  position: fixed;
+} */
+
+.under-construction .fg {
+  position: absolute;
+  top: 0;
+  z-index: 39393939;
+  color: white;
+  padding-top: 18.8vh;
+  padding-left: 5vw;
+}
+
+.under-construction .fg h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.under-construction .fg p {
+  font-size: 1.5rem;
+  margin-top: 0.875rem;
+  font-weight: 800;
+}
+
+.warning-sign {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.yellow-box {
+  position: absolute;
+  top: 17vw;
+  right: 2vw;
+  height: 36.875rem;
+  max-height: 40vh;
+}
