@@ -38,7 +38,7 @@ async function displayLine(lineIndex) {
     (caretVisible ? "<span>|</span>" : "");
   wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
 
-  const currentHeaderText = currentHeaderWord.substring(0, currentHeaderChar);
+  const currentHeaderText = currentHeaderWord.substring(0, currentHeaderChar + 1);
   header.textContent = currentHeaderText;
 
   currentCharIndex = Math.min(currentCharIndex + 1, sentence.length);
