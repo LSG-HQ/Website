@@ -9,6 +9,8 @@ import ellipsisIcon from "./../svgs/ellipsis.svg";
 const chatbotContainer = $("lsg-chatbot-cta-container");
 const email = "";
 
+console.log("adekunle gold");
+
 const chats = [
   {
     message: "Hello, I'm Cleo, your AI assistant. How can I help you today?",
