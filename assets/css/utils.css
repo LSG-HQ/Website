@@ -5,3 +5,13 @@
 .w-full {
   width: 100%;
 }
+
+.wrapper-out {
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+}
+
+.wrapper-in {
+  max-width: 113.75rem;
+  margin: 0 auto;
+}

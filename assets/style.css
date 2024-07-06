@@ -3,6 +3,13 @@
   src: url(../assets/fonts/Aileron-Font-Webkit/Aileron-Bold.woff2);
   font-weight: bold;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
   background-color: #020014;
@@ -10,7 +17,6 @@ body {
   font-family: "Matrice", Arial, Helvetica, sans-serif;
   height: 100vh;
   display: block;
-  padding: 10px;
 }
 
 @media (min-width: 992px) {
@@ -221,19 +227,33 @@ canvas {
 .word_raise {
   color: white;
   font-family: Aileron;
-  font-size: 75px;
+  font-size: 4.6875rem;
   inline-size: 700px;
   margin-top: 20px;
-  /* transform: scale(0.94); */
   font-weight: bold;
-  /* animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1); */
   width: 600px;
   color: #f35626;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 10s infinite linear;
+  line-height: 90px;
 }
+
+@media (min-width: 768px) {
+  .word_raise {
+    font-size: 5rem;
+    line-height: 100px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .word_raise {
+    font-size: 6rem;
+    line-height: 116px;
+  }
+}
+
 @-webkit-keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
@@ -243,7 +263,7 @@ canvas {
   }
 }
 .words_section {
-  margin-top: 80px;
+  padding-top: 80px;
 }
 @keyframes scale {
   100% {
@@ -253,11 +273,14 @@ canvas {
 
 .buttons_section {
   position: absolute;
-  bottom: 90px;
-  left: 21.5%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
   display: flex;
   gap: 30px;
+}
+
+.home-hero {
+  height: calc(100dvh - 230px);
 }
 
 .to_the_game {
@@ -284,10 +307,7 @@ canvas {
   display: flex;
 }
 .logo_for_welcome {
-  margin-top: 80px;
-}
-.main {
-  margin-left: 100px;
+  margin-top: 4rem !important;
 }
 
 .cta {
