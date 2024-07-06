@@ -14,10 +14,10 @@ const wordsSets = [
   "Inspire life without limits",
   "Build the future",
   "Disrespect the impossible",
-  "Playing infinite games",
-  "Technology",
-  "Delivering on hope",
-  "Ourselves",
+  // "Playing infinite games",
+  // "Technology",
+  // "Delivering on hope",
+  // "Ourselves",
 ];
 
 console.log("ayayaya");
@@ -38,8 +38,11 @@ async function displayLine(lineIndex) {
     (caretVisible ? "<span>|</span>" : "");
   wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
 
-  const currentHeaderText = currentHeaderWord.substring(0, currentHeaderChar + 1);
-  header.textContent = currentHeaderText;
+  const currentHeaderText = currentHeaderWord.substring(
+    0,
+    currentHeaderChar + 1
+  );
+  // header.textContent = currentHeaderText;
 
   currentCharIndex = Math.min(currentCharIndex + 1, sentence.length);
   currentHeaderChar = Math.min(currentHeaderChar + 1, currentHeaderWord.length);

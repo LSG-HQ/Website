@@ -3,6 +3,13 @@
   src: url(../assets/fonts/Aileron-Font-Webkit/Aileron-Bold.woff2);
   font-weight: bold;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
   background-color: #020014;
@@ -10,7 +17,6 @@ body {
   font-family: "Matrice", Arial, Helvetica, sans-serif;
   height: 100vh;
   display: block;
-  padding: 10px;
 }
 
 @media (min-width: 992px) {
@@ -221,19 +227,42 @@ canvas {
 .word_raise {
   color: white;
   font-family: Aileron;
-  font-size: 75px;
+  font-size: 2rem;
+  line-height: 40px;
   inline-size: 700px;
   margin-top: 20px;
-  /* transform: scale(0.94); */
   font-weight: bold;
-  /* animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1); */
   width: 600px;
+  max-width: 100%;
   color: #f35626;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 10s infinite linear;
+  line-height: ;
 }
+
+@media (min-width: 320px) {
+  .word_raise {
+    font-size: 3rem;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .word_raise {
+    font-size: 4rem;
+    line-height: 90px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .word_raise {
+    font-size: 6rem;
+    line-height: 116px;
+  }
+}
+
 @-webkit-keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
@@ -243,8 +272,15 @@ canvas {
   }
 }
 .words_section {
-  margin-top: 80px;
+  padding-top: 80px;
 }
+
+@media (max-width: 500px) {
+  .words_section {
+    padding-top: 40px;
+  }
+}
+
 @keyframes scale {
   100% {
     transform: scale(1);
@@ -253,11 +289,33 @@ canvas {
 
 .buttons_section {
   position: absolute;
-  bottom: 90px;
-  left: 21.5%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
   display: flex;
   gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .buttons_section {
+    bottom: 8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .buttons_section {
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    row-gap: 10px;
+  }
+
+  .buttons_section .cta {
+    font-size: 14px;
+  }
+}
+
+.home-hero {
+  height: calc(100dvh - 230px);
 }
 
 .to_the_game {
@@ -284,10 +342,13 @@ canvas {
   display: flex;
 }
 .logo_for_welcome {
-  margin-top: 80px;
+  margin-top: 4rem !important;
 }
-.main {
-  margin-left: 100px;
+
+@media (max-width: 500px) {
+  .logo_for_welcome {
+    margin-top: 3rem !important;
+  }
 }
 
 .cta {

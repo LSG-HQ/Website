@@ -71,3 +71,10 @@ button.primary-button {
   display: flex;
   align-items: center;
 }
+
+.bg-gif {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
+}
