@@ -10,15 +10,15 @@
   --indian-red: #db5764;
 }
 
-#hero-section {
+/* #hero-section {
   background: linear-gradient(
       to left,
       hsla(246, 89%, 7%, 0.8),
       hsla(246, 89%, 7%, 0.8)
     ),
-    url(../../assets/hero-video.gif);
+    url(../../assets/gifs/LSGAnimation3.gif);
   background-size: cover;
-}
+} */
 
 /* #hero-section h3 span {
     background: linear-gradient(to right, var(--uranian-blue), var(--coral-pink), var(--indian-red));
