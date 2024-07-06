@@ -36,3 +36,10 @@
     padding-right: 1.5rem;
   }
 }
+
+.the-bg-img {
+  height: 100dvh;
+  width: 100vw;
+  position: absolute;
+  z-index: 0;
+}

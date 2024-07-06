@@ -12,6 +12,13 @@
   display: flex;
 }
 
+.bg-gif {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
+}
+
 .cta {
   display: flex;
   padding: 10px 25px;
@@ -119,4 +126,26 @@
   svg:nth-child(3) {
     animation-delay: 600ms;
   }
+}
+
+.hero {
+  height: 100dvh;
+}
+
+.hero > section > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.hero > section {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.hero > section h3 {
+  max-width: 60rem;
+  line-height: 120%;
 }
