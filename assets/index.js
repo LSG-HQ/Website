@@ -6,10 +6,10 @@ import backIcon from "./svgs/back.svg";
 import expandIcon from "./svgs/expand.svg";
 import ellipsisIcon from "./svgs/ellipsis.svg";
 
-import hamburger from "./js/hamburger.js";
+// import hamburger from "./js/hamburger.js";
 import aos from "./js/aos.js";
 
-hamburger.init();
+// hamburger.init();
 
 const wordContainer = document.getElementById("wordContainer");
 const caret = document.getElementById("caret");
@@ -407,3 +407,38 @@ const onboardUser = (event) => {
 };
 
 aos.init();
+
+// hamburger
+
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const mobileMenu = $("mobile-menu");
+const closeBtn = $("close-btn");
+
+const openMobileNav = () => {
+  mobileMenu.classList.add("translate-x-0");
+  mobileMenu.classList.remove("translate-x-full");
+};
+
+const closeMobileNav = () => {
+  mobileMenu.classList.add("translate-x-full");
+  mobileMenu.classList.remove("translate-x-0");
+};
+
+const isOpen = () => {
+  return mobileMenu.classList.contains("translate-x-0");
+};
+
+if (!hamburgerBtn) return;
+hamburgerBtn.addEventListener("click", () => {
+  if (isOpen()) {
+    closeMobileNav();
+  } else {
+    openMobileNav();
+  }
+});
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    closeMobileNav();
+  });
+}

@@ -1,6 +1,6 @@
 import { $, _, __ } from "./utils";
 
-const hamburgerBtn = $("hamburger-btn");
+const hamburgerBtn = document.getElementById("hamburger-btn");
 const mobileMenu = $("mobile-menu");
 const closeBtn = $("close-btn");
 
