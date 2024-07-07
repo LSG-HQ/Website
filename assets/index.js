@@ -7,6 +7,7 @@ import expandIcon from "./svgs/expand.svg";
 import ellipsisIcon from "./svgs/ellipsis.svg";
 
 import hamburger from "./js/hamburger.js";
+import aos from "./js/aos.js";
 
 hamburger.init();
 
@@ -404,3 +405,5 @@ const onboardUser = (event) => {
 
   handleStageSwitch();
 };
+
+aos.init();
