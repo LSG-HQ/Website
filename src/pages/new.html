@@ -23,20 +23,35 @@
       class="w-32 h-20 object-cover the-bg-img"
     />
 
-    <header class="mobile-header wrapper-out">
+    <header class="mobile-header wrapper-out relative z-[292929292]">
       <div class="wrapper-in">
         <a href="/"
           ><img src="../../assets/pngs/logo.png" alt="LSG Logo" class="logo"
         /></a>
 
-        <button>
-          <img
-            src="../../assets/svgs/hamburger.svg"
-            alt="LSG Logo"
-            class="logo"
-          />
+        <button id="hamburger-btn">
+          <img src="../../assets/svgs/hamburger.svg" alt="menu" />
         </button>
       </div>
+
+      <section
+        id="mobile-menu"
+        class="w-[20rem] max-w-full bg-[#353A40] fixed bottom-0 right-0 h-[calc(100dvh_-_70px)] translate-x-full z-50 transform transition-transform duration-300 ease-in-out p-8 flex flex-col gap-5 text-right"
+      >
+        <button id="close-btn" class="absolute top-8 left-8">
+          <img
+            src="../../assets/svgs/close-icon.svg"
+            class="h-5 w-5"
+            alt="close"
+          />
+        </button>
+        <a class="w-full p-1 hover:bg-slate-700">Home</a>
+        <a class="w-full p-1 hover:bg-slate-700">Who We Are</a>
+        <a class="w-full p-1 hover:bg-slate-700">What We Do</a>
+        <a class="w-full p-1 hover:bg-slate-700">Join the Team</a>
+        <a class="w-full p-1 hover:bg-slate-700">Contact Us</a>
+        <a class="w-full p-1 hover:bg-slate-700">Arcade</a>
+      </section>
     </header>
 
     <div class="wrapper-out hero">

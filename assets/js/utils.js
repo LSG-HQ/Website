@@ -9,3 +9,5 @@ const _ = (selector) => {
 const __ = (selector) => {
   return document.querySelectorAll(selector);
 };
+
+export { $, _, __ };
