@@ -9,7 +9,7 @@ module.exports = {
         "coral-pink": "#E8998D",
         "uranium-blue": "#B3D5FC",
         "indian-red": "#DB5764",
-      }
+      },
     },
   },
   plugins: [],
