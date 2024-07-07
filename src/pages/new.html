@@ -23,20 +23,55 @@
       class="w-32 h-20 object-cover the-bg-img"
     />
 
-    <header class="mobile-header wrapper-out">
+    <header class="mobile-header wrapper-out relative z-[292929292]">
       <div class="wrapper-in">
         <a href="/"
           ><img src="../../assets/pngs/logo.png" alt="LSG Logo" class="logo"
         /></a>
 
-        <button>
-          <img
-            src="../../assets/svgs/hamburger.svg"
-            alt="LSG Logo"
-            class="logo"
-          />
+        <button id="hamburger-btn">
+          <img src="../../assets/svgs/hamburger.svg" alt="menu" />
         </button>
       </div>
+
+      <section
+        id="mobile-menu"
+        class="w-[20rem] max-w-full bg-[#353A40] fixed bottom-0 right-0 h-[calc(100dvh_-_70px)] translate-x-full z-50 transform transition-transform duration-300 ease-in-out p-8 flex flex-col gap-5 text-right"
+      >
+        <button id="close-btn" class="absolute top-8 left-8">
+          <img
+            src="../../assets/svgs/close-icon.svg"
+            class="h-5 w-5"
+            alt="close"
+          />
+        </button>
+        <a class="w-full p-1 hover:bg-slate-700" href="/">Home</a>
+        <a
+          class="w-full p-1 hover:bg-slate-700"
+          href="./under-construction.html"
+          >Who We Are</a
+        >
+        <a
+          class="w-full p-1 hover:bg-slate-700"
+          href="./under-construction.html"
+          >What We Do</a
+        >
+        <a
+          class="w-full p-1 hover:bg-slate-700"
+          href="./under-construction.html"
+          >Join the Team</a
+        >
+        <a
+          class="w-full p-1 hover:bg-slate-700"
+          href="./under-construction.html"
+          >Contact Us</a
+        >
+        <a
+          class="w-full p-1 hover:bg-slate-700"
+          href="./under-construction.html"
+          >Arcade</a
+        >
+      </section>
     </header>
 
     <div class="wrapper-out hero">
@@ -116,7 +151,9 @@
         class="relative z-10 bg-gradient-to-t from-oxford-blue from-40% to-oxford-blue/80 h-full wrapper-out tech-should"
       >
         <div class="flex flex-col justify-center items-start wrapper-in">
-          <h3 class="text-white text-6xl text-center w-full">
+          <h3
+            class="text-white text-6xl text-left min-[1200px]:text-center w-full"
+          >
             Technology should...
           </h3>
           <div class="flex gap-x-4 text-white colored-texts flex-wrap">
@@ -155,7 +192,7 @@
 
     <section
       id="who-we-are"
-      class="bg-gradient-to-b from-oxford-blue from-10% to-uranium-blue relative min-h-[70vh] py-40 wrapper-out"
+      class="bg-gradient-to-b from-oxford-blue from-10% to-uranium-blue relative min-h-[70vh] pt-40 pb-32 lg:py-40 wrapper-out"
     >
       <svg
         class="absolute top-8 left-0 right-0 w-full"
@@ -233,8 +270,19 @@
 
     <section
       id="opportunities"
-      class="bg-gradient-to-b from-uranium-blue from-[5%] to-white relative min-h-[85vh]"
+      class="bg-gradient-to-b from-uranium-blue from-[5%] to-white relative min-h-[100px] min-[1200px]:min-h-[85vh]"
     >
+      <div class="block min-[1200px]:hidden wrapper-out pb-48">
+        <h5
+          class="wrapper-in text-center max-w-[60rem] text-[1.6rem] lg:text-[2rem] leading-[120%] text-white"
+        >
+          There’s a
+          <span class="text-[#D95966]"
+            >failure of imagination in the people building things</span
+          >, technology was always meant to compound man’s efforts not consume
+          him, we’re trying to fix that....
+        </h5>
+      </div>
       <div
         class="container mx-auto min-h-full xl:items-center xl:justify-between hidden xl:flex"
       >

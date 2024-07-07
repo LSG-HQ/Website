@@ -6,6 +6,10 @@ import backIcon from "./svgs/back.svg";
 import expandIcon from "./svgs/expand.svg";
 import ellipsisIcon from "./svgs/ellipsis.svg";
 
+import hamburger from "./js/hamburger.js";
+
+hamburger.init();
+
 const wordContainer = document.getElementById("wordContainer");
 const caret = document.getElementById("caret");
 const header = document.querySelector(".we_exist");
@@ -36,7 +40,7 @@ async function displayLine(lineIndex) {
   const wordWithCaret =
     sentence.substring(0, currentCharIndex + 1) +
     (caretVisible ? "<span>|</span>" : "");
-  wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
+  if (wordContainer) wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
 
   const currentHeaderText = currentHeaderWord.substring(
     0,

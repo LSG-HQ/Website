@@ -12,11 +12,6 @@
   object-fit: fill;
 }
 
-/* .under-construction {
-  height: 100vh;
-  position: fixed;
-} */
-
 .under-construction .fg {
   position: absolute;
   top: 0;
@@ -24,18 +19,51 @@
   color: white;
   padding-top: 18.8vh;
   padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .under-construction .fg h1 {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 4rem;
+  line-height: 130%;
+}
+
+@media (max-width: 1100px) {
+  .under-construction .fg h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .under-construction .fg h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .under-construction .fg h1 {
+    font-size: 2.2rem;
+  }
 }
 
 .under-construction .fg p {
   font-size: 1.5rem;
   margin-top: 0.875rem;
   font-weight: 800;
+  line-height: 140%;
+}
+
+@media (max-width: 1100px) {
+  .under-construction .fg p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .under-construction .fg p {
+    font-size: 1rem;
+  }
 }
 
 .warning-sign {
@@ -52,4 +80,11 @@
   right: 2vw;
   height: 36.875rem;
   max-height: 40vh;
+}
+
+@media (max-width: 1100px) {
+  .yellow-box {
+    top: 50vh;
+    height: 30vh;
+  }
 }

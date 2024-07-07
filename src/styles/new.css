@@ -132,6 +132,12 @@
   height: 100dvh;
 }
 
+@media (max-width: 1200px) {
+  .hero {
+    height: calc(100dvh - 70px);
+  }
+}
+
 .hero > section > header {
   position: absolute;
   top: 0;
