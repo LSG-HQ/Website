@@ -199,9 +199,10 @@ const renderChatBox = () => {
   `;
 };
 
-// ${cleoImage};
-// add the cleo image that pops up when the chatbot button is hovered.
-chatbotContainer.innerHTML += `
+if (chatbotContainer) {
+  // ${cleoImage};
+  // add the cleo image that pops up when the chatbot button is hovered.
+  chatbotContainer.innerHTML += `
   <button id="lsg-chatbot-cta"></button>
   <img src=${cleoImage} alt="CLEO" class="cleo-image-popup can-show">
   <div class="cleo">
@@ -284,6 +285,7 @@ chatbotContainer.innerHTML += `
     </div>
   </div>
 `;
+}
 
 const chatbotCta = $("lsg-chatbot-cta");
 const cleoBoxContainer = _(".cleo");
@@ -374,21 +376,23 @@ const openChatDialog = () => {
   cleoBoxContainer.classList.add("show");
 };
 
-menuLeftChatWithCleo.addEventListener("click", () => {
-  handleStageSwitch();
-});
+if (menuLeftChatWithCleo) {
+  menuLeftChatWithCleo.addEventListener("click", () => {
+    handleStageSwitch();
+  });
+}
 
-chatbotCta.addEventListener("click", () => {
+chatbotCta?.addEventListener("click", () => {
   openChatDialog();
   handleStageSwitch();
 });
 
-getStartedBtn.addEventListener("click", () => {
+getStartedBtn?.addEventListener("click", () => {
   openChatDialog();
   handleStageSwitch();
 });
 
-$("onboarding-form").addEventListener("submit", (event) => {
+$("onboarding-form")?.addEventListener("submit", (event) => {
   onboardUser(event);
 });
 
