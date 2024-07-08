@@ -373,7 +373,7 @@ canvas {
 
 .cta:hover {
   transition: 0.5s;
-  box-shadow: 10px 10px 0 #006e48;
+  box-shadow: 10px 10px 0 #b4d6fb;
 }
 
 .cta span:nth-child(2) {
@@ -430,7 +430,7 @@ path.two {
     fill: white;
   }
   50% {
-    fill: #006e48;
+    fill: #b4d6fb;
   }
   100% {
     fill: white;
