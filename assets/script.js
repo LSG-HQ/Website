@@ -1,7 +1,8 @@
-import * as THREE from "../three/three.module.js";
-import { OBJLoader } from "../three/OBJLoader.js";
-import { MTLLoader } from "../three/MTLLoader.js";
-import { OrbitControls } from "../three/editedControls.js";
+import * as THREE from "three";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
+import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { modelString as cityModel } from "../src/models/city"
 
 export class CityScape3DRendering {
   constructor() {
@@ -60,19 +61,18 @@ export class CityScape3DRendering {
     // this.addLights();
 
     // load the building
-    // try {
+    try {
       // const materials = await this.loadMaterial("sehir/sehir.mtl");
-      // this.object = await this.loadObject("F_M_cityscape_190421.");
-    // } catch (err) {
+      this.object = await this.loadObject(cityModel);
+    } catch (err) {
       // console.error("Error loading object:", err);
       // Create a simple cube as a placeholder
       const geometry = new THREE.BoxGeometry(1, 1, 1);
       const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
       this.object = new THREE.Mesh(geometry, material);
-    // }
+    }
 
     // wireframe
-
     var mat = new THREE.LineBasicMaterial({
       color: 0xffffff,
       linewidth: 1,
@@ -146,33 +146,35 @@ export class CityScape3DRendering {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
 
-  async loadObject(url, materials) {
+  async loadObject(modelString, materials) {
     const loader = new OBJLoader();
-    loader.setPath("3d/");
+    
     if (materials) {
       loader.setMaterials(materials);
       console.log(materials);
     }
 
     return new Promise((resolve, reject) => {
-      loader.load(
-        // resource URL
-        url,
-        // called when resource is loaded
-        function (_object) {
-          console.log(_object)
-          resolve(_object);
-        },
-        // called when loading is in progresses
-        function (xhr) {
-          console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-        },
-        // called when loading has errors
-        function (error) {
-          console.log("An error happened", error);
-          reject(error);
-        }
-      );
+      if (!modelString) reject("Invalid string!")
+      else resolve(loader.parse(modelString))
+      // loader.load(
+      //   // resource URL
+      //   url,
+      //   // called when resource is loaded
+      //   function (_object) {
+      //     console.log(_object)
+      //     resolve(_object);
+      //   },
+      //   // called when loading is in progresses
+      //   function (xhr) {
+      //     console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+      //   },
+      //   // called when loading has errors
+      //   function (error) {
+      //     console.log("An error happened", error);
+      //     reject(error);
+      //   }
+      // );
     });
   }
 

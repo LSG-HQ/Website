@@ -2,20 +2,15 @@ import { CityScape3DRendering } from "./script.js";
 import { Chatbot } from "./js/chatbot.js";
 
 (async function () {
-  if (window.location.href.includes("main")) {
+  const href = window.location.href;
+  if (href.includes("main")) {
     const cityScape3DRendering = new CityScape3DRendering();
     await cityScape3DRendering.render();
-    console.log(cityScape3DRendering);
+  } else if (href.includes("new")) {
+    const chatbot = new Chatbot();
+    chatbot.init();
   }
 })();
-
-import cleoImage from "./pngs/cleo.png";
-import chatIcon from "./pngs/chat.png";
-import gamePadIcon from "./pngs/gamePad.png";
-import arrowHeadIcon from "./svgs/arrowHead.svg";
-import backIcon from "./svgs/back.svg";
-import expandIcon from "./svgs/expand.svg";
-import ellipsisIcon from "./svgs/ellipsis.svg";
 
 // import hamburger from "./js/hamburger.js";
 import aos from "./js/aos.js";
@@ -112,13 +107,8 @@ const __ = (selector) => {
   return document.querySelectorAll(selector);
 };
 
-// CHATBOT.JS
-const chatbot = new Chatbot();
-chatbot.init()
-
 // ANIMATE ON SCROLL
 aos.init();
-
 
 // hamburger
 const hamburgerBtn = document.getElementById("hamburger-btn");
