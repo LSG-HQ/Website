@@ -1,0 +1,45 @@
+.flex {
+  display: flex;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.wrapper-out {
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+}
+
+.wrapper-in {
+  max-width: 113.75rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .wrapper-out {
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper-out {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper-out {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.the-bg-img {
+  height: 100dvh;
+  width: 100vw;
+  position: absolute;
+  z-index: 0;
+}

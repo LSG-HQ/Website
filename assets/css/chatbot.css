@@ -1,0 +1,467 @@
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+#lsg-chatbot-cta-container {
+  position: fixed;
+  z-index: 9999;
+  right: 6.25rem;
+  bottom: 3.75rem;
+  width: 9rem;
+  height: 9rem;
+}
+
+@media (max-width: 500px) {
+  #lsg-chatbot-cta-container {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+button#lsg-chatbot-cta {
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+
+  background: linear-gradient(180deg, #000020 0%, #24243a 31%, #737373 100%);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 1.4s cubic-bezier(0.4, 0, 1, 1);
+  z-index: 99999;
+}
+
+button#lsg-chatbot-cta.hide,
+.cleo .outer-circle.hide,
+.cleo-image-popup.hide {
+  display: none;
+}
+
+button#lsg-chatbot-cta:hover {
+  transform: rotate(360deg);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+button#lsg-chatbot-cta::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 11.125rem;
+  height: 11.125rem;
+  border-radius: 50%;
+  background: url("./../gifs/chatbot-btn.gif"),
+    linear-gradient(180deg, #000020 0%, #24243a 31%, #737373 100%);
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.cleo-image-popup {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 9.75rem;
+  width: 9.75rem;
+  transition: all 0.5s ease-out;
+}
+
+button#lsg-chatbot-cta:hover ~ .cleo-image-popup.can-show {
+  top: -4rem;
+}
+
+.cleo {
+  width: 19.875rem;
+  height: 38.6875rem;
+  background: linear-gradient(180deg, #100c1b 0%, #413d3f 100%);
+  border-radius: 2.1875rem;
+  position: absolute;
+  bottom: 3.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  color: white;
+}
+
+.cleo.show {
+  opacity: 1;
+}
+
+.cleo .outer-circle {
+  background: rgba(52, 48, 53, 0.4);
+
+  width: 15.5rem;
+  height: 15.5rem;
+  border-radius: 100%;
+  bottom: -6.5625rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cleo .outer-circle .inner-circle {
+  background: rgba(88, 81, 90, 0.55);
+
+  width: 11.75rem;
+  height: 11.75rem;
+  border-radius: 100%;
+}
+
+.cleo .cleo-image {
+  height: 15.25rem;
+  width: 15.25rem;
+}
+
+.cleo #cleo-stage-0,
+.cleo #cleo-stage-1,
+.cleo #cleo-stage-2,
+.cleo #cleo-stage-3 {
+  display: none;
+}
+
+.cleo #cleo-stage-0.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+.cleo #cleo-stage-1.show {
+  display: block;
+  padding: 5rem 2rem;
+}
+
+.cleo #cleo-stage-2.show {
+  display: block;
+  padding: 6.625rem 2rem;
+}
+
+.cleo #cleo-stage-3.show {
+  display: block;
+}
+
+.cleo #cleo-stage-1 .how-can-help {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.cleo h3 {
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.cleo h3 span {
+  font-weight: 300;
+}
+
+.cleo #cleo-stage-2 h3 {
+  margin-bottom: 0.5rem;
+}
+
+.cleo #cleo-stage-2 h3 span {
+  font-weight: 300;
+}
+
+.cleo #cleo-stage-2 h3 b {
+  font-weight: 600;
+}
+
+.cleo #cleo-stage-2 .menu {
+  margin-top: 3.25rem;
+  margin-bottom: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cleo #cleo-stage-2 .menu .menu-left {
+  width: 7.75rem;
+  padding: 1.5rem 0.875rem;
+  background: hsla(260, 19%, 32%, 0.5);
+  border-radius: 0.9375rem 0.9375rem 0.9375rem 2.5rem;
+  cursor: pointer;
+  animation: pulse 1.5s infinite, wiggle 0.5s infinite;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cleo #cleo-stage-2 .menu .menu-left:hover {
+  animation-play-state: paused;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+.cleo #cleo-stage-2 .menu .menu-left img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.cleo #cleo-stage-2 .menu .menu-left p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: white;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
+.cleo #cleo-stage-2 .menu .menu-right {
+  width: 7rem;
+}
+
+.cleo #cleo-stage-2 .menu .menu-right-up {
+  background: hsla(260, 33%, 38%, 0.4);
+  border-radius: 0.9375rem;
+  padding: 0.875rem;
+  height: 5.25rem;
+}
+
+.cleo #cleo-stage-2 .menu .menu-right-bottom {
+  background: hsla(260, 54%, 32%, 0.3);
+  height: 5.5rem;
+  margin-top: 0.5rem;
+  border-radius: 15px 15px 40px 15px;
+}
+
+.cleo #cleo-stage-2 .menu .menu-right img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.cleo p {
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+  color: white;
+}
+
+.cleo .widget-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.back-btn img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.expand-btn img {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: white;
+}
+
+.cleo #onboarding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cleo #onboarding-form input {
+  border-radius: 0.7rem;
+  padding: 0.8rem 1rem;
+  color: white;
+  background: #24202a66;
+  border: 1px solid #272329;
+}
+
+.cleo #onboarding-form .form-btns {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.cleo #onboarding-form button,
+.cleo #cleo-stage-0 button {
+  background: #1e1a25;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4rem;
+  padding: 0.5rem 2.625rem;
+  align-items: center;
+  font-size: 0.625rem;
+  display: flex;
+  column-gap: 0.375rem;
+}
+
+.cleo #cleo-stage-0 button {
+  margin-top: 1rem;
+}
+
+.cleo #bottom-shade {
+  opacity: 0;
+  transition: 1s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.75rem;
+  background: hsla(0, 0%, 100%, 0.05);
+}
+
+.cleo #bottom-shade.show {
+  opacity: 1;
+}
+
+.cleo #onboarding-form button img {
+  height: 0.5rem;
+}
+
+.recent-activities {
+  height: 6.875rem;
+  overflow-y: auto;
+}
+
+.recent-activities p {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.recent-activities a {
+  text-decoration: underline;
+  font-size: 0.7rem;
+}
+
+.recent-activities .activities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-top: 0.875rem;
+}
+
+.recent-activities .activity {
+  padding: 0.875rem 0.625rem;
+  width: 100%;
+  background: hsla(288, 2%, 58%, 0.1);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent-activities .activity p {
+  font-size: 0.65rem;
+}
+
+.recent-activities .activity > div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.recent-activities .activity img.chat {
+  height: 1.125rem;
+}
+
+.recent-activities .activity img.ellipsis {
+  height: 0.2rem;
+}
+
+/* chat box in stage 3 */
+.cleo #cleo-stage-3.show .chat-box {
+  margin-top: 3.75rem;
+  height: 31.4375rem;
+  border-radius: 22px 22px 0px 0px;
+  background: linear-gradient(180deg, #fefefe 0%, #9a9a9a 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cleo #cleo-stage-3.show #chat-box-input {
+  font-size: 0.875rem;
+  width: 100%;
+  padding: 0.875rem 0.625rem;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 3px 199px 12.2px 206px hsla(0, 0%, 0%, 0.25);
+  background: hsla(0, 0%, 82%, 1);
+  border: none;
+  outline: none;
+  color: hsla(0, 6%, 20%, 1);
+}
+
+.cleo #cleo-stage-3.show #chat-box-input::placeholder {
+  color: hsla(0, 6%, 40%, 1);
+}
+
+.cleo #cleo-stage-3.show .chat-box .chats {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.625rem;
+  padding: 0.875rem;
+}
+
+.cleo #cleo-stage-3.show .chat-box .message {
+  display: flex;
+}
+
+.cleo #cleo-stage-3.show .chat-box .message.user {
+  justify-content: flex-end;
+}
+
+.cleo #cleo-stage-3.show .chat-box .message p {
+  font-size: 0.75rem;
+  padding: 0.5rem 0.7rem;
+  color: black;
+  border: 1px solid #696464;
+}
+
+.cleo #cleo-stage-3.show .chat-box .message.user p {
+  border-radius: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.cleo #cleo-stage-3.show .chat-box .message.bot p {
+  border-radius: 0.5rem 0.5rem 0.5rem 0;
+  background: white;
+}
