@@ -1,0 +1,261 @@
+[33mcommit 5180700c68427d9e593028b2f5d423a7c6474d2c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Samuel Aribigbola <ayoolasamuel2302@gmail.com>
+Date:   Mon Nov 18 20:13:50 2024 +0100
+
+    Second Commit
+
+[33mcommit cc14a4b90ade3c3d502292bcd61b2aa45ee9ac9a[m
+Author: Samuel Aribigbola <ayoolasamuel2302@gmail.com>
+Date:   Mon Nov 18 19:36:22 2024 +0100
+
+    Samuel's Commit
+
+[33mcommit f51747609017ef5ebc709f070c655e5e5a437dc8[m
+Author: Fes <91132043+FesLSG@users.noreply.github.com>
+Date:   Sat Nov 9 19:22:25 2024 +0000
+
+    Update new.html to include Google analytics tag
+    
+    Including google analytics tags on every page on the website to track web metadata
+
+[33mcommit 73af7836027689f78fe85781de3832021093e493[m
+Author: Fes <91132043+FesLSG@users.noreply.github.com>
+Date:   Sat Nov 9 19:19:30 2024 +0000
+
+    Update main.html to include Google analytics tag
+    
+    Tagging each of the pages on the website to allow for google analytics tracking of the site to monitor, traffic, location, activities, events on the site etc
+
+[33mcommit 6901f14237a7452476cf7aa2e3b5e383c4718775[m
+Author: Fes <91132043+FesLSG@users.noreply.github.com>
+Date:   Sun Oct 6 18:29:43 2024 +0100
+
+    Update new.html
+    
+    Fixed navbar on website so that "Join The Team" maps to new subdomain "careers"
+
+[33mcommit 843e700e7e9d6694a98f7b406430da8387eaba94[m
+Author: Fes <91132043+FesLSG@users.noreply.github.com>
+Date:   Fri Aug 23 23:38:09 2024 +0100
+
+    Update new.html
+    
+    Changed hyperlinks from google sites url to LSG jobs subdomain I have created on both web and mobile
+
+[33mcommit b7be998b5d42f869a12ad9e840b5be3a1d34cd13[m
+Author: Fes <91132043+FesLSG@users.noreply.github.com>
+Date:   Fri Aug 23 07:47:54 2024 +0100
+
+    Update new.html
+    
+    Previously only updated the mobile menu, pushed updates to hero section linking job portal as well from full desktop version of the site
+
+[33mcommit 14321e26ae16fabc03062cebfaa6252d7ac42527[m
+Author: Fes <91132043+FesLSG@users.noreply.github.com>
+Date:   Thu Aug 22 21:08:17 2024 +0100
+
+    Update new.html
+    
+    Error in spelling in navbar on the home page, changed "Join the Team" to title case = "Join The Team"
+
+[33mcommit 19ca023283bdca5e8aa223b05080150911152e84[m
+Author: Fes <91132043+FesLSG@users.noreply.github.com>
+Date:   Thu Aug 22 21:05:47 2024 +0100
+
+    Update new.html
+    
+    Linked "Join The Team" on the site to the LSG job portal site
+
+[33mcommit db76a7bf6502cde63f357290c8e106154d012d6d[m
+Author: Fes <91132043+FesLSG@users.noreply.github.com>
+Date:   Tue Jul 16 09:14:06 2024 +0100
+
+    Update new.html
+    
+    Fixed typos on new home page on 3rd screen
+
+[33mcommit 37d085d6e67fede8e99381bf7adfb5c76b543957[m
+Merge: 047d517 7702b75
+Author: Jeremiah Lena <jeremiahlena13@gmail.com>
+Date:   Mon Jul 15 23:24:02 2024 +0100
+
+    Merge branch 'gh-pages'
+
+[33mcommit 7702b758ddda780c9a25d5ff336e1952e873edfe[m[33m ([m[1;31morigin/gh-pages[m[33m)[m
+Author: Jeremiah Lena <jeremiahlena13@gmail.com>
+Date:   Mon Jul 15 23:17:01 2024 +0100
+
+    added .gitignore
+
+[33mcommit 047d5176cdbe8892378d72f67df9ac5f106d2a45[m
+Author: Jeremiah Lena <jeremiahlena13@gmail.com>
+Date:   Mon Jul 15 23:14:09 2024 +0100
+
+    deploying to github pages
+
+[33mcommit 166ea4040348624ecca61c20b9d504728ef6e7f2[m
+Author: Jeremiah Lena <jeremiahlena13@gmail.com>
+Date:   Mon Jul 15 23:11:16 2024 +0100
+
+    Updates
+
+[33mcommit 99460108381db40c279ab8db594722e4f5fa5333[m
+Merge: f3eb21a 182dd07
+Author: Jeremiah Lena <jeremiahlena13@gmail.com>
+Date:   Mon Jul 15 15:11:34 2024 +0100
+
+    git
+
+[33mcommit 182dd075092ca0d418efa10c63b85c2080d112ac[m[33m ([m[1;31morigin/jeremiah[m[33m)[m
+Author: Jeremiah Lena <jeremiahlena13@gmail.com>
+Date:   Mon Jul 15 15:03:35 2024 +0100
+
+    commit
+
+[33mcommit 46a4c9f28f33372455cb8a330eeb61cd7f7ab4de[m
+Merge: 3bd064e a2cea1e
+Author: Stephen Emmanuel <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 14 15:08:28 2024 +0300
+
+    Merge pull request #35 from LSG-HQ/feature/LSG-31
+    
+    Update button shadow color
+
+[33mcommit a2cea1e6c7e4c1c16170aa148d1cc41e723d51d9[m[33m ([m[1;31morigin/feature/LSG-31[m[33m)[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 14 13:07:24 2024 +0100
+
+    Update button shadow color
+
+[33mcommit 3bd064e7d01a551b4177e6ac8bf4469a94848cdd[m
+Merge: 253332b a25494d
+Author: Stephen Emmanuel <emmanuelstephen024@gmail.com>
+Date:   Sat Jul 13 21:09:58 2024 +0300
+
+    Merge pull request #34 from LSG-HQ/feature/LSG-31
+    
+    Update cta color
+
+[33mcommit a25494d1eabbcabf718722c341309201648af46c[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Sat Jul 13 19:09:14 2024 +0100
+
+    Update cta color
+
+[33mcommit 253332b4e4ce2d133b5b140339d67f2b40fe9eb2[m
+Merge: 17ced54 b9a195d
+Author: Lena Jeremy <49532117+lenajeremy@users.noreply.github.com>
+Date:   Thu Jul 11 19:48:01 2024 +0100
+
+    Merge pull request #33 from LSG-HQ/jeremiah
+    
+    Jeremiah
+
+[33mcommit b9a195da30fb5df4c0c8497395622d98bdfae98d[m
+Author: Jeremiah Lena <jeremiahlena13@gmail.com>
+Date:   Thu Jul 11 19:34:26 2024 +0100
+
+    cityscape rendering
+
+[33mcommit d8de6905b3109ff0d4d81b0e42f238041627fe14[m
+Author: Jeremiah Lena <jeremiahlena13@gmail.com>
+Date:   Thu Jul 11 10:32:54 2024 +0100
+
+    modularization
+
+[33mcommit 17ced54e895bb06702f3e1ca3a90e516d2bf9f6f[m
+Merge: 8399c91 835f5e9
+Author: Stephen Emmanuel <emmanuelstephen024@gmail.com>
+Date:   Mon Jul 8 23:33:46 2024 +0100
+
+    Merge pull request #32 from LSG-HQ/feature/LSG-30
+    
+    Feature/lsg 30
+
+[33mcommit 835f5e9222ba939652ff8767b62b485de248db33[m[33m ([m[1;31morigin/feature/LSG-30[m[33m)[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Mon Jul 8 22:52:33 2024 +0100
+
+    Update button style
+
+[33mcommit dab580398028bc1efbad3e966946d8ffca2cbf36[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Mon Jul 8 22:52:19 2024 +0100
+
+    Add social media icons
+
+[33mcommit c3a84b92c1fdd75846e92256b7b0f2f60c9b0a99[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Mon Jul 8 22:04:44 2024 +0100
+
+    Remove chat from build
+
+[33mcommit 8399c91f29aa47616fec28c473bfe53db41beee8[m
+Merge: 2d4a471 ed57014
+Author: Stephen Emmanuel <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 21:12:25 2024 +0100
+
+    Merge pull request #31 from LSG-HQ/feature/LSG-30
+    
+    Add fixes
+
+[33mcommit ed5701433dc15f31ab1570ba93d4f290c6fddb66[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 21:06:33 2024 +0100
+
+    Add fixes
+
+[33mcommit 2d4a4717925ac2cee572376688ec6b0b271de7bf[m
+Merge: e6829af 2a46981
+Author: Stephen Emmanuel <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 20:42:12 2024 +0100
+
+    Merge pull request #30 from LSG-HQ/feature/LSG-30
+    
+    Add fade animations
+
+[33mcommit 2a4698134a985e3a2294a836b524e5288a52885a[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 20:41:35 2024 +0100
+
+    Add fade animations
+
+[33mcommit e6829af57694f797ae20e1230b3291dab7cad5ec[m
+Merge: b4a0e9e 163c5e3
+Author: Stephen Emmanuel <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 20:21:45 2024 +0100
+
+    Merge pull request #29 from LSG-HQ/feature/LSG-30
+    
+    Feature/lsg 30
+
+[33mcommit 163c5e39f7d9c18d4c338ceb080e8867c5fe2663[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 20:20:49 2024 +0100
+
+    Complete
+
+[33mcommit ecafe58ab59cde04dcb15d0ebaa62e33a89687e0[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 20:04:02 2024 +0100
+
+    Make under construction page mobile responsive
+
+[33mcommit 59cb5c8466cf00426c9455f4a52a42d6061b2ad4[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 19:55:01 2024 +0100
+
+    Implement mobile navbar
+
+[33mcommit b4a0e9eea1b36950455ba65e1d4991c0c679ad3a[m
+Merge: e447afa 2caa850
+Author: Stephen Emmanuel <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 19:19:52 2024 +0100
+
+    Merge pull request #28 from LSG-HQ/feature/LSG-30
+    
+    Make footer responsive
+
+[33mcommit 2caa85078b3bf4753a264c8e9869564d61e4b8a3[m
+Author: Steph Crown <emmanuelstephen024@gmail.com>
+Date:   Sun Jul 7 1
