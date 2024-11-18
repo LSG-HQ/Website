@@ -79,7 +79,8 @@ canvas {
   overflow: hidden;
 }
 
-.nav-image img, .image img {
+.nav-image img,
+.image img {
   object-fit: contain;
   height: 100%;
 }
@@ -296,7 +297,8 @@ canvas {
   border: none;
 }
 
-.To_site_word, .To_game_word {
+.To_site_word,
+.To_game_word {
   padding-top: 5px;
 }
 
@@ -341,18 +343,18 @@ canvas {
 }
 
 .cta:hover {
-  transition: all .5s;
+  transition: all 0.5s;
   box-shadow: 10px 10px #d95966;
 }
 
 .cta span:nth-child(2) {
   margin-right: 0;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .cta:hover span:nth-child(2) {
   margin-right: 45px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 span {
@@ -367,26 +369,26 @@ span:nth-child(2) {
 }
 
 path.one {
-  transition: all .4s;
+  transition: all 0.4s;
   transform: translateX(-60%);
 }
 
 path.two {
-  transition: all .5s;
+  transition: all 0.5s;
   transform: translateX(-30%);
 }
 
 .cta:hover path.three {
-  animation: 1s .2s infinite color_anim;
+  animation: 1s 0.2s infinite color_anim;
 }
 
 .cta:hover path.one {
-  animation: 1s .6s infinite color_anim;
+  animation: 1s 0.6s infinite color_anim;
   transform: translateX(0%);
 }
 
 .cta:hover path.two {
-  animation: 1s .4s infinite color_anim;
+  animation: 1s 0.4s infinite color_anim;
   transform: translateX(0%);
 }
 

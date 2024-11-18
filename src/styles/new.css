@@ -4,6 +4,10 @@
   font-weight: bold;
 }
 
+.nav-current {
+  color: #b3d5fc;
+}
+
 .a_link {
   text-decoration: none;
   color: white;
@@ -42,7 +46,7 @@
 .cta:hover {
   transition: 0.5s;
   /* box-shadow: 10px 10px 0 #b4d6fb; */
-  box-shadow: 10px 10px 0 #d95966;
+  box-shadow: 10px 10px 0 #b3d5fc;
 }
 
 .cta span:nth-child(2) {
@@ -99,7 +103,7 @@
     fill: white;
   }
   50% {
-    fill: #d95966;
+    fill: #b3d5fc;
   }
   100% {
     fill: white;
@@ -111,7 +115,7 @@
     fill: white;
   }
   100% {
-    fill: #d95966;
+    fill: #b3d5fc;
   }
 }
 

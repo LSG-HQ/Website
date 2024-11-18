@@ -374,7 +374,7 @@ canvas {
 .cta:hover {
   transition: 0.5s;
   /* box-shadow: 10px 10px 0 #b4d6fb; */
-  box-shadow: 10px 10px 0 #d95966;
+  box-shadow: 10px 10px 0 #b3d5fc;
 }
 
 .cta span:nth-child(2) {
