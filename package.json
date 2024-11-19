@@ -5,7 +5,7 @@
   "source": "src/pages/index.html",
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build",
+    "build": "parcel build src/pages/index.html --public-url ./",
     "start": "parcel src/pages/index.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -15,13 +15,14 @@
   "dependencies": {
     "@parcel/transformer-raw": "^2.12.0",
     "aos": "^3.0.0-beta.6",
-    "parcel": "^2.12.0",
     "three": "^0.125.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "gh-pages": "^6.2.0",
+    "parcel": "^2.13.0",
     "postcss": "^8.4.38",
+    "svgo": "^3.3.2",
     "tailwindcss": "^3.4.4"
   }
 }
