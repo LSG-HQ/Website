@@ -49,7 +49,7 @@ iframe.active {
   border-radius: 10px;
   position: absolute;
   opacity: 0.9;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 1.3s ease, opacity 0.3s ease;
 }
 
 /* .card-container:hover .card:nth-child(1) {
