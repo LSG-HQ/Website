@@ -466,6 +466,16 @@
 
 
 
+
+
+    <script>
+      const url = window.location.pathname;
+      if (url.endsWith('.html')) {
+          window.history.replaceState(null, null, url.slice(0, -5));
+      }
+  </script>
+
+
     <script type="module" src="../../index.f2427ece.js" defer=""></script>
     <script type="module" src="./../../assets/index.js"></script>
   </body>

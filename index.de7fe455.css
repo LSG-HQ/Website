@@ -406,6 +406,10 @@ img, video {
   margin-left: -6rem;
 }
 
+.-mt-28 {
+  margin-top: -7rem;
+}
+
 .-mt-44 {
   margin-top: -11rem;
 }
@@ -468,6 +472,10 @@ img, video {
 
 .mt-2 {
   margin-top: .5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mt-\[38px\] {
@@ -636,10 +644,6 @@ img, video {
 
 .w-\[94\%\] {
   width: 94%;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .w-full {
@@ -815,6 +819,10 @@ img, video {
   column-gap: 1rem;
 }
 
+.gap-x-6 {
+  column-gap: 1.5rem;
+}
+
 .gap-y-10 {
   row-gap: 2.5rem;
 }
@@ -823,6 +831,12 @@ img, video {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-16 > :not([hidden]) ~ :not([hidden]) {
@@ -843,12 +857,6 @@ img, video {
   margin-bottom: calc(5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -867,10 +875,6 @@ img, video {
 
 .self-stretch {
   align-self: stretch;
-}
-
-.justify-self-center {
-  justify-self: center;
 }
 
 .overflow-hidden {
@@ -1123,18 +1127,8 @@ img, video {
   line-height: 1;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
 .text-8xl {
   font-size: 6rem;
-  line-height: 1;
-}
-
-.text-9xl {
-  font-size: 8rem;
   line-height: 1;
 }
 
@@ -1195,8 +1189,8 @@ img, video {
   line-height: 28px;
 }
 
-.leading-\[58px\] {
-  line-height: 58px;
+.leading-\[42px\] {
+  line-height: 42px;
 }
 
 .leading-normal {
@@ -1240,16 +1234,6 @@ img, video {
 .text-red-300 {
   --tw-text-opacity: 1;
   color: rgb(252 165 165 / var(--tw-text-opacity));
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
-.text-red-700 {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
 .text-uranium-blue {
@@ -1568,6 +1552,10 @@ button.primary-button {
     top: 60%;
   }
 
+  .lg\:-mt-16 {
+    margin-top: -4rem;
+  }
+
   .lg\:ml-20 {
     margin-left: 5rem;
   }
@@ -1600,10 +1588,6 @@ button.primary-button {
     height: 100%;
   }
 
-  .lg\:w-\[100vw\] {
-    width: 100vw;
-  }
-
   .lg\:w-\[20\%\] {
     width: 20%;
   }
@@ -1630,6 +1614,10 @@ button.primary-button {
 
   .lg\:w-\[80\%\] {
     width: 80%;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:w-full {
@@ -1677,8 +1665,17 @@ button.primary-button {
     line-height: 2.5rem;
   }
 
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
   .lg\:text-\[2rem\] {
     font-size: 2rem;
+  }
+
+  .lg\:leading-\[38px\] {
+    line-height: 38px;
   }
 }
 
@@ -1755,6 +1752,10 @@ button.primary-button {
 
   .xl\:ml-0 {
     margin-left: 0;
+  }
+
+  .xl\:mt-16 {
+    margin-top: 4rem;
   }
 
   .xl\:block {
@@ -1836,6 +1837,11 @@ button.primary-button {
 
   .xl\:text-7xl {
     font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .xl\:text-9xl {
+    font-size: 8rem;
     line-height: 1;
   }
 
