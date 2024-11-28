@@ -287,6 +287,20 @@
   }
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0)scale(1);
+  }
+
+  50% {
+    transform: translateY(-30px)scale(1.1);
+  }
+}
+
+.bounce {
+  animation: 1.4s ease-in-out infinite bounce;
+}
+
 footer h4 {
   margin-bottom: 32px;
   font-size: 1.6rem;
