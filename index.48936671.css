@@ -397,12 +397,12 @@ img, video {
   margin-left: -4rem;
 }
 
-.-ml-20 {
-  margin-left: -5rem;
-}
-
 .-ml-24 {
   margin-left: -6rem;
+}
+
+.-ml-28 {
+  margin-left: -7rem;
 }
 
 .-mt-28 {
@@ -601,28 +601,20 @@ img, video {
   width: 30%;
 }
 
-.w-\[300px\] {
-  width: 300px;
-}
-
 .w-\[35\%\] {
   width: 35%;
 }
 
-.w-\[450px\] {
-  width: 450px;
+.w-\[40\%\] {
+  width: 40%;
 }
 
-.w-\[470px\] {
-  width: 470px;
+.w-\[45\%\] {
+  width: 45%;
 }
 
 .w-\[50\%\] {
   width: 50%;
-}
-
-.w-\[530px\] {
-  width: 530px;
 }
 
 .w-\[65\%\] {
@@ -732,9 +724,9 @@ img, video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.scale-\[80\%\] {
-  --tw-scale-x: 80%;
-  --tw-scale-y: 80%;
+.scale-\[70\%\] {
+  --tw-scale-x: 70%;
+  --tw-scale-y: 70%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -788,6 +780,10 @@ img, video {
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-24 {
+  gap: 6rem;
 }
 
 .gap-4 {
@@ -854,6 +850,12 @@ img, video {
   --tw-space-y-reverse: 0;
   margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(.75rem * var(--tw-space-y-reverse));
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -1483,6 +1485,10 @@ button.primary-button {
     position: absolute;
   }
 
+  .lg\:relative {
+    position: relative;
+  }
+
   .lg\:-bottom-\[10\%\] {
     bottom: -10%;
   }
@@ -1515,8 +1521,16 @@ button.primary-button {
     left: 17%;
   }
 
+  .lg\:left-\[20\%\] {
+    left: 20%;
+  }
+
   .lg\:right-0 {
     right: 0;
+  }
+
+  .lg\:right-\[20\%\] {
+    right: 20%;
   }
 
   .lg\:right-\[3\%\] {
@@ -1607,8 +1621,12 @@ button.primary-button {
     width: 50vw;
   }
 
-  .lg\:w-\[78\.25rem\] {
-    width: 78.25rem;
+  .lg\:w-\[55\.25rem\] {
+    width: 55.25rem;
+  }
+
+  .lg\:w-\[70\%\] {
+    width: 70%;
   }
 
   .lg\:w-\[80\%\] {
@@ -1623,8 +1641,8 @@ button.primary-button {
     width: 100%;
   }
 
-  .lg\:\!max-w-\[80\%\] {
-    max-width: 80% !important;
+  .lg\:\!max-w-\[75\%\] {
+    max-width: 75% !important;
   }
 
   .lg\:translate-y-2 {
@@ -1657,6 +1675,11 @@ button.primary-button {
   .lg\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-4xl {
@@ -1814,6 +1837,10 @@ button.primary-button {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .xl\:flex-col {
+    flex-direction: column;
+  }
+
   .xl\:space-y-9 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(2.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1829,9 +1856,9 @@ button.primary-button {
     line-height: 2rem;
   }
 
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .xl\:text-7xl {
@@ -1842,6 +1869,15 @@ button.primary-button {
   .xl\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .xl\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .xl\:font-normal {
+    font-weight: 400;
   }
 
   .xl\:leading-\[42px\] {
