@@ -44,19 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
       if (scrollPosition > cardPosition) {
         switch (index) {
           case 0:
-            card.style.transform = 'rotate(-12deg) translateX(-40vw)';
+            card.style.transform = 'rotate(-15deg) translateX(-44vw) translateY(-75px)';
             break;
           case 1:
-            card.style.transform = 'rotate(-9deg) translateX(-20vw)';
+            card.style.transform = 'rotate(-7.5deg) translateX(-22vw) translateY(-15px)';
             break;
           case 2:
             card.style.transform = 'rotate(0deg) translateX(0) translateY(0)';
             break;
           case 3:
-            card.style.transform = 'rotate(9deg) translateX(20vw)';
+            card.style.transform = 'rotate(7.5deg) translateX(22vw) translateY(-15px)';
             break;
           case 4:
-            card.style.transform = 'rotate(12deg) translateX(40vw)';
+            card.style.transform = 'rotate(15deg) translateX(44vw) translateY(-75px)';
             break;
           default:
             break;
