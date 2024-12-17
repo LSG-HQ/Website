@@ -71,3 +71,42 @@ iframe.active {
 .card-container:hover .card:nth-child(5) {
   transform: rotate(12deg) translateX(40vw);
 } */
+
+@keyframes custom-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg); /* Resting phase */
+  }
+  100% {
+    transform: rotate(360deg); /* Spinning fast */
+  }
+}
+
+.custom-spin {
+  animation: custom-spin 3s cubic-bezier(0.6, 0.05, 0.28, 0.91) infinite;
+}
+
+@keyframes bg-change {
+  0% {
+    background: linear-gradient(135deg, #020015, #050112);
+  }
+  25% {
+    background: linear-gradient(135deg, #050112, #b3d5fc);
+  }
+  50% {
+    background: linear-gradient(135deg, #b3d5fc, #e8998d);
+  }
+  75% {
+    background: linear-gradient(135deg, #e8998d, #db5764);
+  }
+  100% {
+    background: linear-gradient(135deg, #db5764, #020015);
+  }
+}
+
+.animate-bg-change {
+  animation: bg-change 10s infinite;
+  background-size: 300% 300%; /* Smooth gradient transitions */
+}

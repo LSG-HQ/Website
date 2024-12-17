@@ -20,12 +20,23 @@
     />
     <link rel="stylesheet" href="../styles/new.css" />
     <link rel="stylesheet" href="../styles/tailwind.css" />
+    <link rel="stylesheet" href="../styles/css.css">
     <link rel="stylesheet" href="../../assets/css/chatbot.css" />
     <link rel="stylesheet" href="./../../assets/css/utils.css" />
     <title>LSG!</title>
   </head>
 
   <body class="overflow-x-hidden">
+
+
+
+
+    <div id="loading-screen" class="fixed inset-0 flex items-center justify-center animate-bg-change z-50">
+      <img src="../../assets/LSG LOGO WHITE.png" alt="LSG" class="w-20 h-20 custom-spin">
+    </div>
+
+
+
     <img
       src="../../assets/images/whatwedo.png"
       alt="LSG Logo"
@@ -99,7 +110,7 @@
 
         <div class="container text-center mx-auto -mt-28 lg:-mt-16 space-y-20">
           <div class="w-full flex flex-col items-center text-center">
-            <p class="text-4xl w-[30%] lg:text-7xl xl:text-9xl text-center text-white lg:w-auto">What We Do</p>
+            <p class="text-4xl w-[30%] lg:text-7xl xl:text-[13vw] xl:text xl:w-full text-center text-white lg:w-auto">What We Do</p>
           </div>
             
             <div class="flex justify-end items-center absolute bottom-10 right-[50%] lg:right-10">
@@ -114,39 +125,55 @@
 
   
 
-    <section id="who-we-are" class="min-h-[70vh] w-full h-auto lg:h-[120vh] relative overflow-hidden bg-[url(../../assets/images/Blue%20Ben%20Franklin%20BG%201.png)] bg-cover bg-no-repeat bg-size-[cover] before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-full before:bg-gradient-to-t before:from-transparent before:to-blue-950">
-
-
+    <section id="who-we-are" class="min-h-[70vh] w-full h-auto lg:h-[120vh] p-0 relative overflow-hidden bg-[url(../../assets/images/Blue%20Ben%20Franklin%20BG%201.png)] bg-cover bg-no-repeat bg-size-[cover] before:content-[''] before:absolute before:inset-x-0 before:bottom-0 before:h-full before:bg-gradient-to-t before:from-transparent before:to-blue-950">
       <svg
-        class="absolute top-28 left-0 right-0 w-full opacity-30 xl:hidden"
-        width="1920"
-        height="621"
-        viewBox="0 0 1920 621"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        data-aos="fade-left" data-aos-delay="100"
-      >
-        <path
-          d="M-132 71.876C-110.667 111.213 -44.4 198.287 50 231.889C168 273.893 194 292.572 272 284.571C350 275.571 432 177.885 464 130.881C496 64.877 668 -109.137 912 71.876C1156 231.889 1404 380.565 1528 461.571C1652 523.578 1740 570.571 1876 575.571C1984.8 580.372 1959.33 617.921 1972 615.921"
-          stroke="#D95966"
-          class="opacity-70 transform rotate-12"
-          stroke-width="10"
-        />
-      </svg>
-
-        <div class="container relative w-full h-full space-y-16">
+      class="absolute hidden lg:block -top-48 lg:-top-72 left-0 right-0 w-full opacity-30 xl:hidden"
+      width="2880"
+      height="1242"
+      viewBox="0 0 2880 1242"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      data-aos="fade-left" data-aos-delay="100"
+    >
+      <path
+        d="M-264 143.752C-221.334 223.09 -88.8 396.574 100 463.778C336 551.786 388 584.144 544 576.142C700 567.142 864 355.77 928 261.762C992 128.752 1336 -218.274 1824 143.752C2112 463.778 2808 761.13 3048 923.142C3296 1085.15 3480 1142.142 3768 1145.142C3984.8 1149.372 3943.33 1241.921 3956 1239.921"
+        stroke="#D95966"
+        class="opacity-70 transform rotate-12"
+        stroke-width="10"
+      />
+    </svg>
 
 
-            <div class="flex h-auto items-start justify-center bg-gradient bg-cover bg-no-repeat p-[42px] 1g:h-auto md:h-auto md:p-5 sm:p-4 z-10 relative">
+    <svg
+    class="absolute lg:hidden -top-48 lg:-top-72 left-0 right-0 w-full opacity-30 xl:hidden"
+    width="2880"
+    height="1242"
+    viewBox="0 0 2880 1242"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    data-aos="fade-left" data-aos-delay="100"
+  >
+    <path
+      d="M-264 143.752C-221.334 223.09 -88.8 396.574 100 463.778C336 551.786 388 584.144 544 576.142C700 567.142 864 355.77 928 261.762C992 128.752 1336 -218.274 1824 143.752C2112 463.778 2808 761.13 3048 923.142C3296 1085.15 3480 1142.142 3768 1145.142C3984.8 1149.372 3943.33 1241.921 3956 1239.921"
+      stroke="#D95966"
+      class="opacity-70 transform rotate-12"
+      stroke-width="50"
+    />
+  </svg>
+
+        <div class="relative w-[100vw] h-full space-y-16 pt-[2rem] lg:p-0">
+
+
+            <div class="flex h-auto items-start justify-center bg-gradient bg-cover bg-no-repeat 1g:h-auto md:h-auto md:p-5 sm:p-4 z-10 relative">
                 <div class="mb-[278px] h-full flex w-[94%] justify-center lg:w-full md:w-full">
-                    <div class="w-full h-full relative flex flex-col items-start gap-[78px] 1g:gap-[78px] md:gap-[58px] sm:gap-[39px]">
+                    <div class="w-full h-full relative flex flex-col items-start gap-[78px] md:gap-[58px] sm:gap-[39px]">
                         <div class="flex flex-col items-center justify-between gap-12 lg:inline-block lg:h-[120vh]">
                           
-                            <div class="lg:w-[60%] xl:w-[45%] h-auto lg:absolute lg:top-0 lg:right-0 xl:top-[30%] xl:left-0 px-14" data-aos="fade-up-left" data-aos-delay="100">
-                                <p class="size-text7xl text-left text-white text ui mb-6 w-full !font-medium leading-[32px] xl:leading-[42px] md:w-full md:text-[32px] sm:text-[26px]">
+                            <div class="lg:w-[60%] xl:w-[45%] h-auto lg:px-0 lg:absolute lg:top-[5%] lg:right-0 xl:top-[30%] xl:left-0 xl:px-8 px-14" data-aos="fade-up-left" data-aos-delay="100">
+                                <p class="size-text7xl text-left text-white text ui mb-6 w-full !font-normal leading-[32px] xl:leading-[42px] md:w-full md:text-[32px] sm:text-[26px]">
                                 We use technology to drive investment innovation.
                                 </p>
-                                <button class="xl:hidden w-[100%] items-center mx-auto" data-aos="fade-up" data-aos-delay="100">
+                                <button class="xl:hidden w-[100%] items-center justify-center mx-auto" data-aos="fade-up" data-aos-delay="100">
                                   <a class="cta a_link" href="#">
                                     <span class="To_site_word text-xs">Explore our big ideas</span>
                                     <span>
@@ -190,7 +217,7 @@
 
 
 
-                            <div class="lg:w-[50%] xl:w-[75%] h-auto lg:absolute lg:top-[60%] lg:right-[50%] xl:top-0 xl:-right-[20%] px-14" data-aos="fade-right" data-aos-delay="100">
+                            <div class="lg:w-[50%] xl:w-[75%] h-auto lg:absolute lg:top-[45%] lg:right-[50%] xl:top-0 xl:-right-[20%] px-14" data-aos="fade-right" data-aos-delay="100">
                               <img
                               src="../../assets/images/bar-chart.png"
                               alt="Morganhouselp"
@@ -199,13 +226,13 @@
 
                             
 
-                            <div class="hidden lg:flex lg:w-[50%] h-auto lg:absolute lg:bottom-[10%] lg:right-0 xl:left-0 xl:w-[40%]" data-aos="fade-right-up" data-aos-delay="100">
-                              <p class="xl:hidden size-text7xl text-white text ui mb-6 w-full !font-medium leading-[42px] 1g:w-[20%] md:w-full md:text-[32px] sm:text-[26px]">
+                            <div class="hidden lg:flex lg:w-[50%] h-auto lg:absolute lg:bottom-[25%] lg:right-[3.5rem] xl:bottom-[23%] xl:left-[3.5rem] xl:w-[40%]" data-aos="fade-right-up" data-aos-delay="100">
+                              <p class="xl:hidden size-text7xl text-white text ui mb-6 w-full !font-normal leading-[42px] lg:w-[5%] md:w-full md:text-[32px] sm:text-[26px]">
                                 <span class="text-white-a700"> We leave no stone unturned as we pursue the&nbsp;</span>
                                 <span class="text-red-200"> best ideas</span> in capital markets.&nbsp;
                                 </p>
 
-                                <p  class="hidden xl:block size-text7xl text-white text ui mb-6 w-full !font-medium leading-[28px] lg:leading-[38px] xl:leading-[42px] 1g:w-[20%] md:w-full md:text-[32px] sm:text-[26px]">
+                                <p  class="hidden xl:block size-text7xl text-white text ui mb-6 w-full !font-normal leading-[28px] lg:leading-[38px] xl:leading-[42px] 1g:w-[20%] md:w-full md:text-[32px] sm:text-[26px]">
                                   <span class="text-white-a700">
                                   We build products with more than just profit in mind but also&nbsp;</span
                                   >
@@ -215,15 +242,15 @@
 
                             
 
-                            <div class="lg:w-[70%] h-auto lg:absolute lg:top-[30%] lg:left-0 xl:top-[50%] xl:left-[5%] xl:w-[55%] px-14" data-aos="fade-up" data-aos-delay="100">
-                              <p  class="xl:hidden size-text7xl text-white text ui mb-6 w-full !font-medium leading-[28px] lg:leading-[38px] xl:leading-[42px] md:w-full md:text-[32px] sm:text-[26px]">
+                            <div class="lg:w-[55%] h-auto lg:absolute lg:top-[30%] lg:left-0 xl:top-[45%] xl:left-[5%] xl:w-[55%] px-8" data-aos="fade-up" data-aos-delay="100">
+                              <p  class="xl:hidden size-text7xl text-white text ui mb-6 w-full !font-normal leading-[28px] lg:leading-[38px] xl:leading-[42px] md:w-full lg:text-[28px] md:text-[28px] sm:text-[26px]">
                                 <span class="text-white-a700">
                                 We build products with more than just profit in mind but also&nbsp;</span
                                 >
                                 <span class="text-[#D95966]"> people and places.</span>
                                 </p>
 
-                                <p class="hidden xl:block text-right size-text7xl text-white text ui mb-6 w-full !font-medium leading-[42px] 1g:w-[20%] md:w-full md:text-[32px] sm:text-[26px]">
+                                <p class="hidden xl:block text-right size-text7xl text-white text ui mb-6 w-full !font-normal leading-[42px] 1g:w-[20%] md:w-full md:text-[32px] sm:text-[26px]">
                                   <span class="text-white-a700"> We leave no stone unturned as we pursue the&nbsp;</span>
                                   <span class="text-red-200"> best ideas</span> in capital markets.&nbsp;
                                   </p>
@@ -276,7 +303,13 @@
                 </div>
             </div>
         </div>
+      
     </section>
+    
+
+
+
+  
     
     
 
@@ -483,6 +516,7 @@
 
 
     <script type="module" src="../../index.f2427ece.js" defer=""></script>
+    <script src="../../assets/javascript.js"></script>
     <script type="module" src="./../../assets/index.js"></script>
   </body>
 </html>

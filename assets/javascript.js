@@ -66,4 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  
+
+
+
+
+  window.onload = () => {
+    const loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.classList.add("fade-out");
+    setTimeout(() => {
+      loadingScreen.style.display = "none";
+    }, 500); // Match the duration of the transition
+  };
+  
   
