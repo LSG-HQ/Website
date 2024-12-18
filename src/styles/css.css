@@ -109,4 +109,5 @@ iframe.active {
 .animate-bg-change {
   animation: bg-change 10s infinite;
   background-size: 300% 300%; /* Smooth gradient transitions */
+  transition: bg-change 10s ease-in-out infinite;
 }
