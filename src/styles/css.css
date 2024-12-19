@@ -107,7 +107,7 @@ iframe.active {
 }
 
 .animate-bg-change {
-  animation: bg-change 9s infinite;
+  animation: bg-change 12s infinite;
   background-size: 300% 300%; /* Smooth gradient transitions */
-  transition: bg-change 9s ease-in-out infinite;
+  transition: bg-change 12s ease-in-out infinite;
 }
